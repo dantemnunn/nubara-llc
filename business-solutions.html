@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Business Solutions AI | NUBARA LLC</title>
+
+  <meta
+    name="description"
+    content="NUBARA Business Solutions AI helps businesses improve customer service, lead follow-up, appointment workflows and business forms."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #090909;
+      --black2: #151515;
+      --gold: #c9a227;
+      --gold-light: #e8cc6b;
+      --cream: #f7f4ec;
+      --white: #ffffff;
+      --gray: #b8b8b8;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    header {
+      background: rgba(9, 9, 9, 0.97);
+      border-bottom: 1px solid rgba(201, 162, 39, 0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--white);
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        radial-gradient(circle at top, rgba(201,162,39,.22), transparent 38%),
+        linear-gradient(180deg, #111111, #090909);
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 78px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: var(--gold-light);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 32px;
+      color: #dedede;
+      font-size: 19px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: #111;
+      padding: 15px 26px;
+      border-radius: 6px;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--gold-light);
+    }
+
+    /* INTRO */
+
+    .intro {
+      background: var(--cream);
+      color: var(--black);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: clamp(34px, 5vw, 50px);
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      max-width: 820px;
+      margin: auto;
+      font-size: 18px;
+      color: #3b3b3b;
+    }
+
+    /* SERVICES */
+
+    .services {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-heading small {
+      color: var(--gold-light);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(36px, 5vw, 52px);
+      margin-top: 10px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: linear-gradient(145deg, #171717, #101010);
+      border: 1px solid rgba(201, 162, 39, 0.28);
+      border-radius: 14px;
+      padding: 34px;
+      min-height: 300px;
+    }
+
+    .number {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 24px;
+    }
+
+    .icon {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      color: var(--gold-light);
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      color: #d0d0d0;
+      font-size: 17px;
+    }
+
+    /* HOW IT WORKS */
+
+    .process {
+      background: var(--cream);
+      color: var(--black);
+      padding: 90px 0;
+    }
+
+    .process h2 {
+      text-align: center;
+      font-size: clamp(34px, 5vw, 48px);
+      margin-bottom: 45px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step {
+      background: var(--white);
+      border-left: 5px solid var(--gold);
+      padding: 30px;
+      border-radius: 8px;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    /* REQUEST */
+
+    .request {
+      padding: 90px 0;
+      text-align: center;
+      background:
+        radial-gradient(circle at center, rgba(201,162,39,.18), transparent 38%),
+        #0c0c0c;
+    }
+
+    .request h2 {
+      font-size: clamp(36px, 6vw, 56px);
+      margin-bottom: 18px;
+    }
+
+    .request p {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      color: #d0d0d0;
+      font-size: 18px;
+    }
+
+    .status-box {
+      max-width: 700px;
+      margin: 30px auto 0;
+      padding: 24px;
+      border: 1px solid rgba(201,162,39,.45);
+      border-radius: 10px;
+      background: #151515;
+    }
+
+    .status-box strong {
+      color: var(--gold-light);
+    }
+
+    /* CONTACT */
+
+    .contact {
+      background: var(--cream);
+      color: var(--black);
+      padding: 75px 0;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 18px;
+      color: var(--gold);
+      background: #111;
+      padding: 14px 22px;
+      border-radius: 6px;
+      font-weight: 800;
+    }
+
+    /* FOOTER */
+
+    footer {
+      text-align: center;
+      padding: 38px 20px;
+      background: #080808;
+      border-top: 1px solid rgba(201,162,39,.25);
+      color: #bcbcbc;
+    }
+
+    .footer-brand {
+      color: var(--gold-light);
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .legal {
+      margin: 15px 0;
+    }
+
+    .legal a {
+      color: #d5d5d5;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .legal a:hover {
+      color: var(--gold-light);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+      nav {
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 75px 0;
+      }
+
+      .service-card {
+        padding: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="index.html">NUBARA<span>✦</span></a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#divisions">Divisions</a>
+        <a href="business-solutions.html">Services</a>
+        <a href="https://zdtb5v-dw.myshopify.com/">Shop</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+
+      <div class="eyebrow">NUBARA Business Solutions AI</div>
+
+      <h1>
+        Smarter Systems.<br>
+        <span>Better Business Flow.</span>
+      </h1>
+
+      <p>
+        NUBARA Business Solutions AI helps businesses improve everyday
+        customer communication, lead follow-up, scheduling and workflow
+        organization using practical AI-assisted systems and automation.
+      </p>
+
+      <a class="button" href="#request">
+        Request a Service
+      </a>
+
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="container">
+
+      <h2>Practical Business Solutions</h2>
+
+      <p>
+        Every business operates differently. NUBARA focuses on practical
+        systems designed around a business's actual workflow. Service
+        requests are reviewed before work begins so we can determine
+        whether the requested solution is appropriate and currently
+        supported.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+
+      <div class="section-heading">
+        <small>What We Offer</small>
+        <h2>Business Solutions AI Services</h2>
+      </div>
+
+      <div class="service-grid">
+
+        <article class="service-card">
+          <div class="number">01</div>
+          <div class="icon">💬</div>
+
+          <h3>AI Customer Service</h3>
+
+          <p>
+            AI-assisted customer communication systems designed to help
+            businesses respond to common questions, organize inquiries,
+            improve response consistency and support customers more
+            efficiently. Solutions are reviewed based on the business's
+            existing customer-service process.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="number">02</div>
+          <div class="icon">🎯</div>
+
+          <h3>Lead Generation &amp; Follow-Up</h3>
+
+          <p>
+            Systems that help businesses identify, organize and manage
+            potential customer opportunities. We can help structure lead
+            information and create follow-up workflows so promising
+            inquiries are easier to track and respond to.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="number">03</div>
+          <div class="icon">📅</div>
+
+          <h3>Appointment &amp; Booking Automation</h3>
+
+          <p>
+            Workflow support for businesses that rely on appointments or
+            booking requests. Solutions may help organize scheduling,
+            confirmations, reminders and customer booking information
+            while reducing repetitive administrative steps.
+          </p>
+        </article>
+
+        <article class="service-card">
+          <div class="number">04</div>
+          <div class="icon">📋</div>
+
+          <h3>Business Forms &amp; Workflow Setup</h3>
+
+          <p>
+            Digital intake forms and workflow structures designed to make
+            everyday business processes easier to manage. This may include
+            customer intake, service requests, internal forms, information
+            collection and follow-up organization.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="process">
+    <div class="container">
+
+      <h2>How Service Requests Work</h2>
+
+      <div class="steps">
+
+        <div class="step">
+          <strong>1. Tell Us What You Need</strong>
+          <p>
+            Describe the business problem, process or workflow you want
+            help improving.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>2. NUBARA Reviews the Request</strong>
+          <p>
+            The request is reviewed to determine whether the service is
+            currently supported and whether NUBARA can provide a practical
+            solution.
+          </p>
+        </div>
+
+        <div class="step">
+          <strong>3. Next Steps Are Confirmed</strong>
+          <p>
+            If the request is a fit, NUBARA will communicate the proposed
+            next steps before any service work begins.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="request" id="request">
+    <div class="container">
+
+      <div class="eyebrow">Request a Service</div>
+
+      <h2>Let's Improve Your Workflow</h2>
+
+      <p>
+        NUBARA is preparing a secure customer service-request system.
+        Requests will be reviewed by the OWNER before services are accepted.
+      </p>
+
+      <div class="status-box">
+        <strong>Request Form Status: OWNER REVIEW REQUIRED</strong>
+        <p>
+          The secure online request form is being prepared and is not yet
+          activated for public customer submissions.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container">
+
+      <h2>Contact NUBARA</h2>
+
+      <p>
+        For general business inquiries, contact the NUBARA team.
+      </p>
+
+      <a class="email" href="mailto:nubarallc@yahoo.com">
+        nubarallc@yahoo.com
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+
+  <div class="footer-brand">NUBARA LLC</div>
+
+  <p>Smart Products. Smart Solutions. Smarter Growth.</p>
+
+  <div class="legal">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+  </div>
+
+  <p>© 2026 NUBARA LLC. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
