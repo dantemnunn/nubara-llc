@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>NUBARA LLC | Commerce, Marketing, Business Solutions & Media</title>
+  <title>NUBARA LLC | Smart Products. Smart Solutions. Smarter Growth.</title>
 
-  <meta name="description" content="NUBARA LLC is an AI-assisted business company building practical products, marketing solutions, business services, and media.">
+  <meta
+    name="description"
+    content="NUBARA builds across e-commerce, marketing, AI-assisted business solutions and media."
+  >
 
   <style>
     * {
@@ -42,46 +45,63 @@
     }
 
     .container {
-      width: min(1120px, 90%);
-      margin: auto;
+      width: min(1180px, 92%);
+      margin: 0 auto;
     }
 
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(5,5,5,.95);
+      background: rgba(5,5,5,.96);
       border-bottom: 1px solid #2b2b2b;
     }
 
     nav {
-      min-height: 74px;
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
     }
 
     .brand {
-      font-size: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1.05;
+    }
+
+    .brand-name {
+      font-size: 24px;
       font-weight: 800;
       letter-spacing: 5px;
-    }.brand img {
-  height: 58px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
+    }
 
-    .brand span {
+    .brand-name span {
       color: var(--gold);
+    }
+
+    .brand-tagline {
+      margin-top: 7px;
+      color: var(--gold-light);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .navlinks {
       display: flex;
-      gap: 25px;
+      align-items: center;
+      gap: 24px;
       font-size: 14px;
-      font-weight: bold;
+      font-weight: 700;
+    }
+
+    .navlinks a {
+      transition: .2s ease;
     }
 
     .navlinks a:hover {
@@ -89,254 +109,333 @@
     }
 
     .hero {
-      min-height: 82vh;
+      min-height: 640px;
       display: flex;
       align-items: center;
       text-align: center;
       background:
-        radial-gradient(circle at 50% 20%, #342a12 0%, #111 35%, #050505 75%);
-      border-bottom: 1px solid #222;
+        radial-gradient(circle at 50% 35%, rgba(201,162,39,.23), transparent 28%),
+        linear-gradient(180deg, #111 0%, #080808 100%);
     }
 
     .hero-content {
       max-width: 900px;
-      margin: auto;
+      margin: 0 auto;
       padding: 90px 0;
     }
 
     .spark {
       color: var(--gold-light);
-      font-size: 54px;
-      margin-bottom: 5px;
+      font-size: 48px;
+      margin-bottom: 10px;
     }
 
     .hero h1 {
-      font-size: clamp(58px, 11vw, 118px);
-      letter-spacing: 13px;
+      font-size: clamp(58px, 10vw, 112px);
+      letter-spacing: 12px;
       line-height: 1;
-      margin-bottom: 18px;
+      margin-bottom: 22px;
     }
 
-    .tagline {
+    .hero-kicker {
       color: var(--gold-light);
-      letter-spacing: 7px;
-      font-size: 17px;
-      margin-bottom: 30px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
     }
 
     .hero p {
-      color: #d7d7d7;
-      max-width: 700px;
-      margin: 0 auto 35px;
+      max-width: 720px;
+      margin: 0 auto;
+      color: #e5e5e5;
       font-size: 18px;
     }
 
-    .buttons {
+    .hero-buttons {
       display: flex;
       justify-content: center;
-      gap: 14px;
       flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 32px;
     }
 
     .btn {
       display: inline-block;
-      padding: 14px 25px;
-      border-radius: 5px;
-      font-weight: 700;
-      transition: .2s;
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-weight: 800;
+      border: 2px solid var(--gold);
     }
 
-    .btn-gold {
-      background: linear-gradient(135deg,var(--gold),var(--gold-light));
-      color: #080808;
+    .btn-primary {
+      background: var(--gold);
+      color: #111;
     }
 
     .btn-outline {
-      border: 1px solid var(--gold);
       color: var(--gold-light);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
     }
 
     section {
       padding: 90px 0;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 45px;
+    .light {
+      background: var(--cream);
+      color: #171717;
     }
 
-    .section-title small {
+    .section-label {
       color: var(--gold);
       text-transform: uppercase;
-      letter-spacing: 4px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(32px,5vw,50px);
-      margin-top: 8px;
-    }
-
-    .about {
-      background: var(--cream);
-      color: #111;
-    }
-
-    .about-box {
-      max-width: 900px;
-      margin: auto;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 5px;
       text-align: center;
+      margin-bottom: 12px;
     }
 
-    .about-box p {
-      font-size: 19px;
-      margin-bottom: 22px;
+    .section-title {
+      text-align: center;
+      font-size: clamp(36px, 6vw, 58px);
+      line-height: 1.1;
+      margin-bottom: 28px;
     }
 
-    .goal {
-      margin-top: 35px;
-      padding: 25px;
+    .section-copy {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+      color: #555;
+    }
+
+    .mission-box {
+      max-width: 960px;
+      margin: 35px auto 0;
+      background: rgba(255,255,255,.65);
       border-left: 5px solid var(--gold);
-      background: #fff;
-      text-align: left;
-      box-shadow: 0 10px 35px rgba(0,0,0,.08);
+      padding: 26px;
+      font-size: 17px;
     }
 
     .divisions {
-      background: #0c0c0c;
+      background: #0d0d0d;
     }
 
-    .grid {
+    .division-grid {
+      margin-top: 46px;
       display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 18px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
 
-    .card {
-      background: linear-gradient(160deg,#202020,#0b0b0b);
-      border: 1px solid #333;
-      padding: 30px 24px;
+    .division-card {
+      background: linear-gradient(160deg, #191919, #111);
+      border: 1px solid #39301b;
       border-radius: 10px;
-      min-height: 330px;
-      transition: .25s;
+      padding: 28px;
+      min-height: 320px;
     }
 
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: var(--gold);
-    }
-
-    .number {
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .icon {
-      font-size: 39px;
-      margin: 18px 0;
-    }
-
-    .card h3 {
+    .division-number {
       color: var(--gold-light);
-      font-size: 21px;
-      margin-bottom: 14px;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 18px;
     }
 
-    .card p {
-      color: #c9c9c9;
+    .division-icon {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .division-card h3 {
+      color: var(--gold-light);
+      font-size: 23px;
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .division-card p {
+      color: #d4d4d4;
       font-size: 15px;
     }
 
-    .mission {
-      text-align: center;
-      background:
-        linear-gradient(135deg,#171717,#050505);
+    .division-card a {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--gold-light);
+      font-weight: 800;
     }
 
-    .mission h2 {
-      font-size: clamp(35px,6vw,58px);
+    .growth {
+      text-align: center;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(201,162,39,.18), transparent 35%),
+        #111;
+    }
+
+    .growth h2 {
+      font-size: clamp(38px, 7vw, 70px);
+      line-height: 1.15;
       margin-bottom: 20px;
     }
 
-    .mission h2 span {
+    .growth h2 span {
       color: var(--gold-light);
     }
 
-    .mission p {
-      max-width: 760px;
-      margin: auto;
-      color: #ccc;
+    .growth p {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #d0d0d0;
       font-size: 18px;
     }
 
-    .contact {
-      background: var(--cream);
-      color: #111;
+    .request {
+      background: #111;
       text-align: center;
     }
 
+    .request-box {
+      max-width: 850px;
+      margin: 35px auto 0;
+      border: 2px solid var(--gold);
+      border-radius: 10px;
+      padding: 32px;
+      background: #161616;
+    }
+
+    .request-box strong {
+      color: var(--gold-light);
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .request-box p {
+      color: #ddd;
+    }
+
+    .disabled-btn {
+      margin-top: 22px;
+      display: inline-block;
+      padding: 13px 24px;
+      border: 1px solid #666;
+      color: #aaa;
+      border-radius: 4px;
+      cursor: not-allowed;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(38px, 6vw, 60px);
+      margin-bottom: 18px;
+    }
+
     .contact p {
-      margin: 15px auto 28px;
-      max-width: 650px;
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 28px;
     }
 
     .email {
       display: inline-block;
-      background: #111;
+      background: #191919;
       color: var(--gold-light);
-      padding: 15px 24px;
+      padding: 16px 25px;
       border-radius: 5px;
-      font-weight: bold;
+      font-weight: 800;
     }
 
     footer {
-      padding: 35px 0;
       text-align: center;
-      background: #050505;
-      border-top: 1px solid #222;
-      color: #999;
+      background: #080808;
+      padding: 48px 20px;
+      border-top: 1px solid #272727;
     }
 
     footer strong {
       color: var(--gold-light);
-      letter-spacing: 3px;
+      letter-spacing: 4px;
     }
 
-    @media(max-width:900px) {
-      .grid {
-        grid-template-columns: repeat(2,1fr);
+    .footer-tagline {
+      margin: 15px 0;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+
+    .footer-links a {
+      font-weight: 700;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .copyright {
+      color: #aaa;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 950px) {
+      .division-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
-    }
 
-    @media(max-width:650px) {
       nav {
-        justify-content: center;
+        align-items: flex-start;
+        padding: 16px 0;
       }
 
       .navlinks {
-        display: none;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 14px 18px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        flex-direction: column;
+      }
+
+      .navlinks {
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .brand-tagline {
+        white-space: normal;
       }
 
       .hero {
-        min-height: 75vh;
+        min-height: 560px;
       }
 
       .hero h1 {
-        font-size: 48px;
         letter-spacing: 7px;
       }
 
-      .tagline {
-        font-size: 12px;
-        letter-spacing: 4px;
+      .hero-kicker {
+        letter-spacing: 3px;
       }
 
-      .grid {
+      .division-grid {
         grid-template-columns: 1fr;
       }
 
@@ -352,205 +451,234 @@
 <header>
   <div class="container">
     <nav>
-      <div class="brand">
-  <img src="IMG_0216.png" alt="NUBARA">
-</div>
+
+      <a class="brand" href="index.html">
+        <div class="brand-name">NUBARA<span>✦</span></div>
+        <div class="brand-tagline">
+          Smart Products. Smart Solutions. Smarter Growth.
+        </div>
+      </a>
 
       <div class="navlinks">
-    <a href="index.html">Home</a>
-    <a href="#about">About</a>
-    <a href="#divisions">Divisions</a>
-    <a href="business-solutions.html">Services</a>
-    <a href="https://zdtb5v-dw.myshopify.com/">Shop</a>
-    <a href="#contact">Contact</a>
-</div>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#divisions">Divisions</a>
+        <a href="business-solutions.html">Services</a>
+        <a href="https://zdtb5v-dw.myshopify.com/">Shop</a>
+        <a href="#contact">Contact</a>
+      </div>
+
     </nav>
   </div>
 </header>
 
 <main>
 
-<section class="hero">
-  <div class="container hero-content">
+  <section class="hero">
+    <div class="container hero-content">
 
-    <div class="spark">✦</div>
+      <div class="spark">✦</div>
 
-    <h1>NUBARA</h1>
+      <h1>NUBARA</h1>
 
-    <div class="tagline">
-      SHOP. DISCOVER. DELIVER.
-    </div>
-
-    <p>
-      One company building across commerce, marketing,
-      AI-assisted business solutions and media.
-    </p>
-
-    <div class="buttons">
-      <a class="btn btn-gold" href="#divisions">
-        Explore NUBARA
-      </a>
-
-      <a class="btn btn-outline" href="#contact">
-        Contact Us
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<section class="about" id="about">
-
-  <div class="container">
-
-    <div class="section-title">
-      <small>Company Info</small>
-      <h2>Building Practical Businesses</h2>
-    </div>
-
-    <div class="about-box">
+      <div class="hero-kicker">
+        Smart Products. Smart Solutions. Smarter Growth.
+      </div>
 
       <p>
-        NUBARA LLC is an AI-assisted business company building
-        practical products, services, media, marketing solutions,
-        and scalable revenue opportunities.
+        One company building across commerce, marketing,
+        AI-assisted business solutions and media.
       </p>
 
-      <div class="goal">
-        <strong>Our goal is simple:</strong>
-        solve real customer problems, generate diversified revenue,
-        and build long-term NUBARA-owned businesses and assets.
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#divisions">Explore NUBARA</a>
+        <a class="btn btn-outline" href="#contact">Contact Us</a>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="divisions" id="divisions">
 
-  <div class="container">
+  <section id="about" class="light">
+    <div class="container">
 
-    <div class="section-title">
-      <small>NUBARA LLC</small>
-      <h2>Our Divisions</h2>
-    </div>
+      <div class="section-label">Company Info</div>
 
-    <div class="grid">
+      <h2 class="section-title">
+        Building Practical Businesses
+      </h2>
 
-      <article class="card">
-        <div class="number">01</div>
-        <div class="icon">🛒</div>
+      <p class="section-copy">
+        NUBARA is an AI-assisted business company developing practical
+        products, services, marketing systems, media and scalable business
+        opportunities.
+      </p>
 
-        <h3>NUBARA E-COMMERCE</h3>
-
-        <p>
-          Digital products, marketplaces, product research,
-          AI-assisted dropshipping, product validation,
-          storefront growth and future physical products.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="number">02</div>
-        <div class="icon">📣</div>
-
-        <h3>NUBARA MARKETING</h3>
-
-        <p>
-          Marketing, content, lead generation, social media
-          and growth services for businesses, restaurants,
-          bars, entrepreneurs and other clients.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="number">03</div>
-        <div class="icon">📈</div>
-
-        <h3>BUSINESS SOLUTIONS AI</h3>
-
-        <p>
-          Market research, investor support, property and deal
-          analysis, listing content, lead generation and
-          AI-assisted business services.
-        </p>
-      </article>
-
-      <article class="card">
-        <div class="number">04</div>
-        <div class="icon">🎬</div>
-
-        <h3>NUBARA MEDIA STUDIOS</h3>
-
-        <p>
-          NUBARA-owned content, faceless channels,
-          short-form video concepts, educational and
-          entertainment content and future media brands.
-        </p>
-      </article>
+      <div class="mission-box">
+        <strong>Our goal is simple:</strong>
+        solve real customer problems, create useful business systems,
+        develop strong brands and build long-term NUBARA-owned assets.
+      </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="mission" id="mission">
 
-  <div class="container">
+  <section id="divisions" class="divisions">
+    <div class="container">
 
-    <h2>
-      Smart Products. Smart Solutions.
-      <span>Smarter Growth.</span>
-    </h2>
+      <div class="section-label">NUBARA</div>
+      <h2 class="section-title">Our Divisions</h2>
 
-    <p>
-      NUBARA combines technology, commerce, marketing and media
-      to develop useful products, create business opportunities
-      and build brands designed for long-term growth.
-    </p>
+      <div class="division-grid">
 
-  </div>
-</section>
+        <article class="division-card">
+          <div class="division-number">01</div>
+          <div class="division-icon">🛍️</div>
+          <h3>NUBARA E-Commerce</h3>
+          <p>
+            Digital products, product research, AI-assisted e-commerce,
+            dropshipping validation, Shopify growth and future physical
+            products.
+          </p>
+          <a href="https://zdtb5v-dw.myshopify.com/">Visit Shop →</a>
+        </article>
 
-<section class="contact" id="contact">
 
-  <div class="container">
+        <article class="division-card">
+          <div class="division-number">02</div>
+          <div class="division-icon">📣</div>
+          <h3>NUBARA Marketing</h3>
+          <p>
+            Marketing, content support, lead generation, social media
+            growth and practical promotional systems for businesses and
+            entrepreneurs.
+          </p>
+        </article>
 
-    <div class="section-title">
-      <small>Connect With NUBARA</small>
-      <h2>Let's Build Something</h2>
+
+        <article class="division-card">
+          <div class="division-number">03</div>
+          <div class="division-icon">⚙️</div>
+          <h3>Business Solutions AI</h3>
+          <p>
+            AI Customer Service, Lead Generation & Follow-Up,
+            Appointment & Booking Automation, and Business Forms &
+            Workflow Setup.
+          </p>
+          <a href="business-solutions.html">View Services →</a>
+        </article>
+
+
+        <article class="division-card">
+          <div class="division-number">04</div>
+          <div class="division-icon">🎬</div>
+          <h3>NUBARA Media Studios</h3>
+          <p>
+            NUBARA-owned content, short-form video concepts,
+            educational and entertainment media, faceless channels
+            and future media brands.
+          </p>
+        </article>
+
+      </div>
     </div>
+  </section>
 
-    <p>
-      For business inquiries, partnerships, marketing,
-      business solutions or general NUBARA inquiries,
-      contact our team.
-    </p>
 
-    <a class="email" href="mailto:nubarallc@yahoo.com">
-      nubarallc@yahoo.com
-    </a>
+  <section class="growth">
+    <div class="container">
 
-  </div>
-</section>
+      <div class="section-label">Our Direction</div>
+
+      <h2>
+        Smart Products. Smart Solutions.
+        <span>Smarter Growth.</span>
+      </h2>
+
+      <p>
+        NUBARA combines technology, commerce, marketing and media to
+        develop useful products, improve business workflows and build
+        brands designed for long-term growth.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section class="request">
+    <div class="container">
+
+      <div class="section-label">Request a Service</div>
+
+      <h2 class="section-title">
+        Let’s Improve Your Workflow
+      </h2>
+
+      <p style="max-width:760px;margin:0 auto;color:#ddd;">
+        NUBARA is preparing a secure customer service-request system.
+        Requests will be reviewed by the OWNER before services are accepted.
+      </p>
+
+      <div class="request-box">
+        <strong>Request Form Status: OWNER REVIEW REQUIRED</strong>
+
+        <p>
+          The secure online request form is being prepared and is not yet
+          activated for public customer submissions.
+        </p>
+
+        <span class="disabled-btn">
+          Request a Service — Coming Soon
+        </span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="contact" class="light contact">
+    <div class="container">
+
+      <div class="section-label">Connect With NUBARA</div>
+
+      <h2>Let’s Build Something</h2>
+
+      <p>
+        For business inquiries, partnerships, marketing,
+        business solutions or general NUBARA inquiries,
+        contact our team.
+      </p>
+
+      <a class="email" href="mailto:nubarallc@yahoo.com">
+        nubarallc@yahoo.com
+      </a>
+
+    </div>
+  </section>
 
 </main>
 
+
 <footer>
-  <div class="container">
+
   <strong>NUBARA LLC</strong>
-  <br><br>
 
-  Shop. Discover. Deliver.
-  <br><br>
+  <div class="footer-tagline">
+    Smart Products. Smart Solutions. Smarter Growth.
+  </div>
 
-  <a href="privacy-policy.html">Privacy Policy</a>
-  &nbsp; | &nbsp;
-  <a href="terms-of-service.html">Terms of Service</a>
+  <div class="footer-links">
+    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="terms-of-service.html">Terms of Service</a>
+    <a href="business-solutions.html">Business Solutions</a>
+    <a href="https://zdtb5v-dw.myshopify.com/">Shop</a>
+  </div>
 
-  <br><br>
+  <div class="copyright">
+    © 2026 NUBARA LLC. All rights reserved.
+  </div>
 
-  © 2026 NUBARA LLC. All rights reserved.
-</div>
 </footer>
 
 </body>
