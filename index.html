@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>NUBARA LLC | Business, Commerce, AI & Media</title>
+  <meta name="description" content="NUBARA LLC brings together e-commerce, marketing, AI-powered business solutions and media under one modern company.">
+
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --black2: #151515;
+      --gold: #c9a227;
+      --gold-light: #e0c66b;
+      --cream: #f5f0e6;
+      --white: #ffffff;
+      --gray: #b8b8b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
+      color: var(--cream);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,11,.96);
+      border-bottom: 1px solid rgba(201,162,39,.35);
+    }
+
+    nav {
+      min-height: 74px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .brand {
+      color: var(--gold);
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+      font-size: .95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 78vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(201,162,39,.14), transparent 30%),
+        linear-gradient(135deg,#080808,#151515);
+      border-bottom: 1px solid #252525;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      padding: 90px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: .95;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 720px;
+      color: #d3d3d3;
+      font-size: 1.15rem;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: #080808;
+      padding: 14px 24px;
+      border-radius: 6px;
+      font-weight: 800;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .section-title small {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .section-title h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: var(--gray);
+      margin-top: 12px;
+    }
+
+    .services {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    .services .section-title p {
+      color: #555;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 35px;
+      border: 1px solid #ddd4c1;
+      border-radius: 12px;
+      min-height: 230px;
+    }
+
+    .number {
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 1.4rem;
+    }
+
+    .card h3 {
+      font-size: 1.45rem;
+      margin: 12px 0;
+    }
+
+    .card p {
+      color: #555;
+    }
+
+    .about {
+      background: #101010;
+    }
+
+    .about-box {
+      border-left: 4px solid var(--gold);
+      padding: 10px 0 10px 30px;
+      max-width: 800px;
+    }
+
+    .about-box p {
+      color: #c8c8c8;
+      font-size: 1.1rem;
+    }
+
+    .contact {
+      text-align: center;
+      background: linear-gradient(135deg,#171717,#090909);
+    }
+
+    .contact h2 {
+      font-size: clamp(2rem,5vw,3.4rem);
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #bbb;
+      max-width: 650px;
+      margin: 0 auto 28px;
+    }
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid #292929;
+      color: #aaa;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 720px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        gap: 14px;
+        justify-content: flex-start;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 75px 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="container">
+    <a class="brand" href="#home">NUBARA</a>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <div class="eyebrow">NUBARA LLC</div>
+
+    <h1>Building smarter.<br><span>Moving forward.</span></h1>
+
+    <p>
+      NUBARA LLC is a modern business company combining e-commerce,
+      marketing, AI-powered business solutions and digital media
+      into one growing ecosystem.
+    </p>
+
+    <a class="button" href="#services">Explore NUBARA</a>
+    <a class="button button-outline" href="#contact">Contact Us</a>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+
+    <div class="section-title">
+      <small>What We Do</small>
+      <h2>Four divisions. One company.</h2>
+      <p>
+        NUBARA develops practical business operations across commerce,
+        marketing, artificial intelligence and media.
+      </p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="number">01</div>
+        <h3>NUBARA E-Commerce</h3>
+        <p>
+          Product discovery, online retail and digital commerce operations
+          designed around efficient modern selling.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="number">02</div>
+        <h3>NUBARA Marketing</h3>
+        <p>
+          Digital marketing, brand development and customer-growth
+          strategies that help businesses strengthen their online presence.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="number">03</div>
+        <h3>Business Solutions AI</h3>
+        <p>
+          AI-supported workflows and business solutions designed to help
+          organizations improve everyday operations and customer processes.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="number">04</div>
+        <h3>NUBARA Media</h3>
+        <p>
+          Digital media and content operations focused on creating,
+          organizing and preparing modern video content for online platforms.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+
+    <div class="section-title">
+      <small>About NUBARA</small>
+      <h2>A company built for modern business.</h2>
+    </div>
+
+    <div class="about-box">
+      <p>
+        NUBARA LLC brings multiple digital business capabilities under one
+        company. Our goal is to build useful, scalable operations across
+        e-commerce, marketing, AI-enabled business solutions and media while
+        maintaining responsible human oversight.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <small class="eyebrow">CONTACT NUBARA</small>
+
+    <h2>Let's build what comes next.</h2>
+
+    <p>
+      For business inquiries, partnerships, services or general questions,
+      contact NUBARA LLC.
+    </p>
+
+    <a class="button" href="mailto:nubarallc@yahoo.com">
+      nubarallc@yahoo.com
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>
+      © 2026 NUBARA LLC. All rights reserved.
+    </div>
+
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
