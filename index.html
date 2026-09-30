@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="NUBARA builds across e-commerce, marketing, AI-business solutions and media."
+    content="NUBARA builds across e-commerce, marketing, AI business solutions and media."
   >
 
   <style>
@@ -20,15 +20,14 @@
 
     :root {
       --black: #050505;
-      --black2: #0d0d0d;
+      --black-2: #0b0b0b;
       --panel: #111111;
-      --panel2: #171717;
-      --white: #f7f7f7;
-      --gray: #bdbdbd;
-      --gold: #d7a63d;
-      --gold-light: #f0c45a;
-      --border: rgba(240, 196, 90, 0.25);
-      --max-width: 1200px;
+      --white: #f8f8f8;
+      --gray: #bcbcbc;
+      --gold: #d9a63b;
+      --gold-light: #f4c44f;
+      --border: rgba(244,196,79,.26);
+      --max: 1200px;
     }
 
     html {
@@ -38,10 +37,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
+      background: var(--black);
       color: var(--white);
-      background:
-        radial-gradient(circle at 50% 5%, rgba(215,166,61,.15), transparent 26%),
-        linear-gradient(180deg, #050505 0%, #0a0a0a 45%, #050505 100%);
       line-height: 1.5;
       overflow-x: hidden;
     }
@@ -51,103 +48,63 @@
       text-decoration: none;
     }
 
+    img,
     svg {
       display: block;
+      max-width: 100%;
     }
 
     .container {
-      width: min(var(--max-width), calc(100% - 40px));
+      width: min(var(--max), calc(100% - 40px));
       margin: 0 auto;
     }
 
     .eyebrow {
       color: var(--gold-light);
       text-transform: uppercase;
-      letter-spacing: 5px;
-      font-weight: 800;
       font-size: 12px;
-      margin-bottom: 14px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
     }
 
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5,5,5,.95);
+      background: rgba(5,5,5,.96);
       border-bottom: 1px solid rgba(255,255,255,.08);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(10px);
     }
 
     nav {
-      min-height: 84px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 28px;
+      gap: 30px;
     }
 
-    .brand-logo {
-  position: relative;
-  display: inline-block;
-  min-width: 315px;
-  padding: 24px 0 8px;
-}
-
-.brand-word {
-  display: block;
-  font-size: 27px;
-  font-weight: 500;
-  letter-spacing: 8px;
-  line-height: 1;
-}
-
-.brand-tagline {
-  display: block;
-  margin-top: 9px;
-  color: var(--gold-light);
-  font-size: 8px;
-  font-weight: 800;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.brand-swoosh {
-  position: absolute;
-  width: 125px;
-  height: 46px;
-  border-top: 4px solid var(--gold);
-  border-radius: 50%;
-  top: 2px;
-  right: 20px;
-  transform: rotate(-17deg);
-}
-
-.brand-star {
-  position: absolute;
-  top: -1px;
-  right: 13px;
-  color: var(--gold-light);
-  font-size: 27px;
-  line-height: 1;
-}
+    .header-brand {
+      font-size: 25px;
+      font-weight: 500;
+      letter-spacing: 8px;
+      white-space: nowrap;
+    }
 
     .navlinks {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 23px;
+      gap: 24px;
       flex-wrap: wrap;
       font-size: 14px;
       font-weight: 700;
     }
 
     .navlinks a {
-      color: #efefef;
       transition: .2s ease;
     }
 
@@ -155,90 +112,103 @@
       color: var(--gold-light);
     }
 
-    /* =========================
-       HERO
-    ========================= */
+    .nav-contact {
+      padding: 11px 20px;
+      border-radius: 6px;
+      background: var(--gold-light);
+      color: #111 !important;
+    }
+
+    /* HERO */
 
     .hero {
-      min-height: 690px;
+      position: relative;
+      min-height: 650px;
       display: grid;
       place-items: center;
       text-align: center;
-      position: relative;
       overflow: hidden;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.28),
+          rgba(0,0,0,.42)
+        ),
+        url("nubara-global.jpg") center 37% / cover no-repeat;
+      border-bottom: 1px solid rgba(255,255,255,.08);
     }
 
-    .hero::before {
+    .hero::after {
       content: "";
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 50% 35%, rgba(240,196,90,.24), transparent 20%),
-        radial-gradient(circle at 8% 80%, rgba(215,166,61,.08), transparent 24%),
-        radial-gradient(circle at 92% 78%, rgba(215,166,61,.08), transparent 23%);
+        radial-gradient(
+          circle at 50% 48%,
+          rgba(217,166,59,.20),
+          transparent 30%
+        );
       pointer-events: none;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
-      padding: 110px 0 80px;
+      padding: 95px 0 80px;
     }
 
     .hero-logo {
       position: relative;
       display: inline-block;
-      padding: 56px 45px 18px;
-      margin-bottom: 20px;
+      padding: 60px 40px 15px;
     }
 
     .hero-word {
-      font-size: clamp(65px, 11vw, 132px);
+      font-size: clamp(62px, 10vw, 125px);
       font-weight: 500;
-      line-height: .95;
       letter-spacing: clamp(8px, 1.5vw, 18px);
+      line-height: .95;
+      text-shadow: 0 5px 30px rgba(0,0,0,.45);
     }
 
     .hero-tagline {
+      margin-top: 22px;
       color: var(--gold-light);
-      margin-top: 25px;
-      font-size: clamp(11px, 1.4vw, 16px);
+      text-transform: uppercase;
+      font-size: clamp(11px, 1.4vw, 15px);
       font-weight: 800;
       letter-spacing: 5px;
-      text-transform: uppercase;
     }
 
     .hero-swoosh {
       position: absolute;
-      width: clamp(220px, 32vw, 420px);
+      width: clamp(210px, 31vw, 400px);
       height: 110px;
-      border-top: 8px solid var(--gold);
-      border-radius: 50%;
-      top: 5px;
+      top: 8px;
       right: 5%;
-      transform: rotate(-17deg);
+      border-top: 7px solid var(--gold-light);
+      border-radius: 50%;
+      transform: rotate(-16deg);
     }
 
     .hero-star {
       position: absolute;
-      top: -7px;
-      right: 22%;
+      top: 1px;
+      right: 21%;
       color: var(--gold-light);
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1;
-      text-shadow: 0 0 25px rgba(240,196,90,.45);
+      font-size: clamp(39px, 5vw, 62px);
+      text-shadow: 0 0 28px rgba(244,196,79,.5);
     }
 
     .hero-copy {
-      max-width: 850px;
-      margin: 0 auto;
-      color: #e7e7e7;
+      margin: 6px auto 0;
+      max-width: 800px;
       font-size: clamp(17px, 2vw, 21px);
+      color: #f0f0f0;
     }
 
     .hero-actions {
-      margin-top: 34px;
+      margin-top: 30px;
       display: flex;
       justify-content: center;
       gap: 14px;
@@ -246,14 +216,18 @@
     }
 
     .btn {
-      min-width: 185px;
       display: inline-flex;
-      justify-content: center;
       align-items: center;
-      padding: 15px 25px;
-      border-radius: 7px;
+      justify-content: center;
+      min-width: 185px;
+      padding: 15px 24px;
+      border-radius: 6px;
       font-weight: 800;
       transition: .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
     }
 
     .btn-primary {
@@ -262,82 +236,51 @@
       border: 1px solid var(--gold-light);
     }
 
-    .btn-secondary {
-      background: transparent;
+    .btn-outline {
+      border: 1px solid var(--gold-light);
       color: var(--gold-light);
-      border: 1px solid var(--gold);
+      background: rgba(0,0,0,.32);
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    /* =========================
-       DIVISIONS
-    ========================= */
+    /* DIVISIONS */
 
     .divisions {
-      padding: 82px 0 92px;
+      padding: 52px 0;
       background:
-        radial-gradient(circle at 50% 0%, rgba(217,168,62,.08), transparent 28%),
-        #080808;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+        linear-gradient(180deg,#060606,#090909);
+      border-bottom: 1px solid rgba(255,255,255,.07);
     }
 
-    .section-heading {
-      text-align: center;
-      margin-bottom: 38px;
-    }
-
-    .section-heading h2 {
-      font-size: clamp(38px, 5vw, 62px);
-      line-height: 1.05;
-      margin-bottom: 14px;
-    }
-
-    .section-heading p {
-      max-width: 730px;
-      margin: 0 auto;
-      color: var(--gray);
-      font-size: 17px;
-    }
-
-    .division-row {
+    .division-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
     }
 
     .division-card {
-      min-height: 132px;
-      display: grid;
-      grid-template-columns: 60px 1fr 34px;
-      align-items: center;
-      gap: 15px;
-      padding: 20px;
-      border: 1px solid rgba(240,196,90,.22);
-      border-radius: 10px;
-      background: linear-gradient(145deg, #111111, #090909);
-      transition: .22s ease;
+      padding: 8px 28px 14px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,.12);
     }
 
-    .division-card:hover {
-      border-color: var(--gold-light);
-      transform: translateY(-4px);
-      box-shadow: 0 15px 35px rgba(215,166,61,.09);
+    .division-card:last-child {
+      border-right: 0;
     }
 
     .division-icon {
-      width: 52px;
-      height: 52px;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 15px;
       display: grid;
       place-items: center;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
       color: var(--gold-light);
+      box-shadow: 0 0 24px rgba(217,166,59,.12);
     }
 
     .division-icon svg {
-      width: 46px;
-      height: 46px;
+      width: 34px;
+      height: 34px;
       stroke: currentColor;
       fill: none;
       stroke-width: 2;
@@ -346,307 +289,298 @@
     }
 
     .division-card h3 {
-      font-size: 13px;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
+      font-size: 17px;
       margin-bottom: 7px;
     }
 
     .division-card p {
       color: #c9c9c9;
       font-size: 14px;
-      line-height: 1.4;
+      max-width: 210px;
+      margin: 0 auto 14px;
     }
 
-    .division-arrow {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: rgba(215,166,61,.11);
+    .division-link {
       color: var(--gold-light);
-      font-size: 19px;
       font-weight: 800;
-      transition: .2s ease;
+      font-size: 13px;
     }
 
-    .division-card:hover .division-arrow {
-      background: var(--gold-light);
-      color: #111;
-    }
-
-    /* =========================
-       ABOUT
-    ========================= */
+    /* ABOUT */
 
     .about {
-      padding: 100px 0;
-      background: linear-gradient(180deg, #0b0b0b, #070707);
+      padding: 78px 0;
+      background: #070707;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.05fr .95fr;
-      gap: 60px;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 58px;
       align-items: center;
     }
 
     .about h2 {
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.04;
-      margin-bottom: 22px;
+      font-size: clamp(38px, 5vw, 56px);
+      margin-bottom: 18px;
     }
 
     .about p {
-      max-width: 660px;
-      color: #d6d6d6;
-      font-size: 18px;
+      color: #d1d1d1;
+      font-size: 17px;
+      max-width: 600px;
     }
 
-    .about-visual {
-      min-height: 340px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      background:
-        radial-gradient(circle at 73% 28%, rgba(222,173,56,.25), transparent 25%),
-        linear-gradient(135deg, #07101a, #181006);
-      display: grid;
-      place-items: center;
+    .about-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 26px;
+    }
+
+    .about-image {
+      min-height: 360px;
+      border-radius: 13px;
       overflow: hidden;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.04),
+          rgba(0,0,0,.18)
+        ),
+        url("nubara-global.jpg") center / cover no-repeat;
+      box-shadow: 0 16px 45px rgba(0,0,0,.35);
     }
 
-    .about-brand-mark {
-  position: relative;
-  text-align: center;
-  padding: 72px 25px 40px;
-}
-
-    .about-logo-word {
-      font-size: clamp(42px, 7vw, 78px);
-      letter-spacing: 10px;
-      font-weight: 500;
-    }
-
-    .about-logo-tagline {
-      color: var(--gold-light);
-      margin-top: 13px;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .about-swoosh {
-  position: absolute;
-  width: 210px;
-  height: 78px;
-  border-top: 5px solid var(--gold);
-  border-radius: 50%;
-  top: 15px;
-  right: 17%;
-  transform: rotate(-17deg);
-}
-
-    .about-star-large {
-  position: absolute;
-  top: 0;
-  right: 23%;
-  color: var(--gold-light);
-  font-size: 50px;
-  line-height: 1;
-
-    .about-star-small {
-  position: absolute;
-  top: 30px;
-  right: 15%;
-  color: var(--gold-light);
-  font-size: 20px;
-  line-height: 1;
-}
-
-    /* =========================
-       MEDIA
-    ========================= */
+    /* MEDIA */
 
     .media {
-      padding: 90px 0;
-      text-align: center;
-      background:
-        radial-gradient(circle at 50% 20%, rgba(215,166,61,.07), transparent 25%),
-        #070707;
-      border-top: 1px solid rgba(255,255,255,.05);
-      border-bottom: 1px solid rgba(255,255,255,.05);
+      padding: 66px 0;
+      background: #090909;
+      border-top: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 55px;
+      align-items: center;
     }
 
     .media h2 {
-      font-size: clamp(42px, 6vw, 68px);
-      line-height: 1.05;
-      margin-bottom: 15px;
+      font-size: clamp(36px, 5vw, 52px);
+      margin-bottom: 10px;
     }
 
-    .media-description {
-      max-width: 760px;
-      margin: 0 auto;
-      color: #c8c8c8;
-      font-size: 17px;
+    .media-copy {
+      color: #c9c9c9;
+      font-size: 16px;
+      max-width: 560px;
     }
 
     .media-cards {
       display: grid;
-      grid-template-columns: repeat(2, minmax(240px, 360px));
-      justify-content: center;
-      gap: 20px;
-      margin-top: 36px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
     .media-card {
+      min-height: 104px;
       display: flex;
       align-items: center;
-      gap: 18px;
-      text-align: left;
-      padding: 22px;
-      border: 1px solid #54431f;
-      border-radius: 10px;
-      background: linear-gradient(145deg, #171717, #0b0b0b);
+      gap: 17px;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 9px;
+      background: linear-gradient(145deg,#151515,#0c0c0c);
       transition: .2s ease;
     }
 
     .media-card:hover {
-      border-color: var(--gold-light);
       transform: translateY(-3px);
+      border-color: var(--gold-light);
     }
 
-    .media-icon {
-      width: 54px;
-      height: 54px;
-      flex: 0 0 54px;
+    .social-icon {
+      width: 53px;
+      height: 53px;
+      flex: 0 0 53px;
       display: grid;
       place-items: center;
+      border-radius: 12px;
+      font-size: 24px;
+      font-weight: 900;
     }
 
-    .tiktok-icon {
-      color: var(--gold-light);
-      border: 2px solid var(--gold-light);
-      border-radius: 50%;
-      background: #111;
+    .tiktok {
+      color: white;
+      background: #050505;
+      border: 1px solid #333;
     }
 
-    .tiktok-icon svg {
-      width: 31px;
-      height: 31px;
-      fill: currentColor;
-    }
-
-    .youtube-icon {
-      background: var(--gold-light);
-      border-radius: 14px;
-      color: #080808;
-    }
-
-    .youtube-icon svg {
-      width: 34px;
-      height: 34px;
-      fill: currentColor;
+    .youtube {
+      background: #ff0000;
+      color: white;
     }
 
     .media-card strong {
       display: block;
-      font-size: 19px;
+      font-size: 17px;
     }
 
     .media-card span {
       display: block;
-      color: var(--gray);
+      margin-top: 3px;
+      color: #c4c4c4;
       font-size: 14px;
-      margin-top: 4px;
     }
 
-    /* =========================
-       CONTACT
-    ========================= */
+    .media-arrow {
+      margin-left: auto;
+      color: var(--gold-light);
+      font-size: 20px;
+    }
+
+    /* CONTACT */
 
     .contact {
-      background: #f4f1e8;
-      color: #111;
-      text-align: center;
-      padding: 88px 0;
+      background: #f5f5f3;
+      color: #101522;
+      padding: 74px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 65px;
+      align-items: center;
     }
 
     .contact .eyebrow {
-      color: #b7892e;
+      color: #ad7c15;
     }
 
     .contact h2 {
-      font-size: clamp(44px, 7vw, 76px);
-      line-height: 1.05;
-      margin-bottom: 16px;
+      font-size: clamp(40px, 5vw, 58px);
+      margin-bottom: 14px;
     }
 
     .contact p {
-      max-width: 730px;
-      margin: 0 auto 28px;
-      color: #555;
-      font-size: 18px;
+      color: #454545;
+      font-size: 17px;
+      max-width: 520px;
     }
 
-    .contact-email {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 15px 25px;
-      border-radius: 7px;
-      background: #111;
-      color: var(--gold-light);
-      font-weight: 800;
-      border: 1px solid #111;
-      transition: .2s ease;
-    }
-
-    .contact-email:hover {
-      transform: translateY(-2px);
-    }
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer {
-      padding: 29px 0;
-      background: #050505;
-      border-top: 1px solid rgba(255,255,255,.08);
-      color: #9d9d9d;
-      font-size: 13px;
-    }
-
-    .footer-row {
+    .contact-buttons {
+      margin-top: 26px;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
-    .footer-links {
-      display: flex;
+    .contact-btn {
+      display: inline-flex;
+      justify-content: center;
       align-items: center;
+      padding: 15px 22px;
+      border-radius: 6px;
+      font-weight: 800;
+    }
+
+    .contact-email {
+      background: #111;
+      color: var(--gold-light);
+    }
+
+    .request-service {
+      background: var(--gold-light);
+      color: #111;
+    }
+
+    .contact-panel {
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 15px 40px rgba(0,0,0,.06);
+    }
+
+    .contact-panel h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .contact-panel p {
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #050505;
+      padding: 34px 0 28px;
+      color: #a9a9a9;
+      font-size: 13px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+
+    .footer-brand {
+      color: white;
+      font-size: 22px;
+      letter-spacing: 7px;
+    }
+
+    .footer-tagline {
+      margin-top: 7px;
+      color: var(--gold-light);
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .footer-nav {
+      display: flex;
       gap: 18px;
       flex-wrap: wrap;
     }
 
-    .footer-links a:hover {
+    .footer-bottom {
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .legal-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    a:hover {
       color: var(--gold-light);
     }
 
-    /* =========================
-       TABLET
-    ========================= */
+    /* TABLET */
 
-    @media (max-width: 980px) {
-
+    @media (max-width: 950px) {
       nav {
-        align-items: flex-start;
         flex-direction: column;
+        align-items: flex-start;
         padding: 18px 0;
       }
 
@@ -654,63 +588,49 @@
         justify-content: flex-start;
       }
 
-      .division-row {
+      .division-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .about-grid {
+      .division-card {
+        border-bottom: 1px solid rgba(255,255,255,.10);
+      }
+
+      .about-grid,
+      .media-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .about-visual {
-        max-width: 700px;
-        width: 100%;
+      .about-image {
+        min-height: 340px;
       }
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 650px) {
-
       .container {
-        width: min(calc(100% - 28px), var(--max-width));
+        width: min(var(--max), calc(100% - 28px));
       }
 
-      .brand-logo {
-        min-width: 0;
-        width: 100%;
-      }
-
-      .brand-word {
-        font-size: 24px;
+      .header-brand {
+        font-size: 22px;
         letter-spacing: 6px;
       }
 
-      .brand-tagline {
-        white-space: normal;
-        max-width: 300px;
-        line-height: 1.5;
-      }
-
-      .brand-swoosh {
-        width: 95px;
-        right: 10px;
-      }
-
       .navlinks {
-        width: 100%;
-        gap: 14px 18px;
-        font-size: 13px;
+        gap: 12px 16px;
+        font-size: 12px;
       }
 
       .hero {
-        min-height: 620px;
+        min-height: 590px;
+        background-position: 50% center;
       }
 
       .hero-content {
-        padding-top: 80px;
+        padding-top: 70px;
       }
 
       .hero-logo {
@@ -719,47 +639,38 @@
       }
 
       .hero-word {
-        font-size: clamp(54px, 18vw, 82px);
-        letter-spacing: 7px;
+        font-size: clamp(52px, 18vw, 80px);
       }
 
       .hero-tagline {
-        letter-spacing: 2.5px;
-        line-height: 1.7;
+        letter-spacing: 2px;
+        line-height: 1.8;
       }
 
       .hero-swoosh {
-        width: 210px;
-        height: 85px;
-        right: 0;
+        width: 205px;
+        right: 1%;
       }
 
-      .division-row {
+      .division-grid {
         grid-template-columns: 1fr;
       }
 
       .division-card {
-        grid-template-columns: 55px 1fr 34px;
-      }
-
-      .about-visual {
-        min-height: 300px;
-      }
-
-      .about-logo-word {
-        letter-spacing: 6px;
-      }
-
-      .about-swoosh {
-        right: 8%;
-        width: 165px;
+        border-right: 0;
+        padding: 26px 10px;
       }
 
       .media-cards {
         grid-template-columns: 1fr;
       }
 
-      .footer-row {
+      .about-image {
+        min-height: 285px;
+      }
+
+      .footer-top,
+      .footer-bottom {
         flex-direction: column;
         align-items: flex-start;
       }
@@ -769,480 +680,327 @@
 
 <body>
 
-  <!-- HEADER -->
+<header>
+  <div class="container">
+    <nav>
 
-  <header>
-    <div class="container">
-      <nav>
+      <a class="header-brand" href="#home">
+        NUBARA
+      </a>
 
-        <a href="#home" class="brand-logo" aria-label="NUBARA home">
-          <span class="brand-swoosh"></span>
-          <span class="brand-star">✦</span>
+      <div class="navlinks">
+        <a href="#home">Home</a>
+        <a href="#divisions">E-Commerce</a>
+        <a href="#divisions">Marketing</a>
+        <a href="business-solutions.html">Business Solutions</a>
+        <a href="#media">Media</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Contact</a>
+      </div>
 
-          <span class="brand-word">
-            NUBARA
-          </span>
+    </nav>
+  </div>
+</header>
 
-          <span class="brand-tagline">
-            Smart Products. Smart Solutions. Smarter Growth.
-          </span>
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="container hero-content">
+
+      <div class="hero-logo">
+
+        <span class="hero-swoosh"></span>
+        <span class="hero-star">✦</span>
+
+        <div class="hero-word">
+          NUBARA
+        </div>
+
+        <div class="hero-tagline">
+          Smart Products. Smart Solutions. Smarter Growth.
+        </div>
+
+      </div>
+
+      <p class="hero-copy">
+        One Company Building Across Commerce, Marketing, AI-Business and Media.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="btn btn-primary" href="#divisions">
+          Explore NUBARA
         </a>
 
-        <div class="navlinks">
-          <a href="#home">Home</a>
-          <a href="#divisions">E-Commerce</a>
-          <a href="#divisions">Marketing</a>
-          <a href="business-solutions.html">Business Solutions</a>
-          <a href="#media">Media</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <a class="btn btn-outline" href="#contact">
+          Contact Us
+        </a>
 
-      </nav>
+      </div>
+
     </div>
-  </header>
 
-  <main>
+  </section>
 
-    <!-- HERO -->
+  <!-- DIVISIONS -->
 
-    <section class="hero" id="home">
+  <section class="divisions" id="divisions">
 
-      <div class="container hero-content">
+    <div class="container division-grid">
 
-        <div class="hero-logo">
+      <!-- E-COMMERCE -->
 
-          <span class="hero-swoosh"></span>
-          <span class="hero-star">✦</span>
+      <div class="division-card">
 
-          <div class="hero-word">
-            NUBARA
-          </div>
+        <div class="division-icon">
 
-          <div class="hero-tagline">
-            Smart Products. Smart Solutions. Smarter Growth.
-          </div>
+          <svg viewBox="0 0 48 48">
+            <path d="M13 15h22l2 25H11l2-25Z"></path>
+            <path d="M18 17v-4a6 6 0 0 1 12 0v4"></path>
+          </svg>
 
         </div>
 
-        <p class="hero-copy">
-          One Company Building Across Commerce, Marketing, AI-Business, Media.
+        <h3>E-Commerce</h3>
+
+        <p>
+          Smart products and modern commerce solutions.
         </p>
 
-        <div class="hero-actions">
+        <a
+          class="division-link"
+          href="https://zdtb5v-dw.myshopify.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Store →
+        </a>
+
+      </div>
+
+      <!-- MARKETING -->
+
+      <div class="division-card">
+
+        <div class="division-icon">
+
+          <svg viewBox="0 0 48 48">
+            <rect x="7" y="27" width="7" height="13"></rect>
+            <rect x="20.5" y="18" width="7" height="22"></rect>
+            <rect x="34" y="8" width="7" height="32"></rect>
+          </svg>
+
+        </div>
+
+        <h3>Marketing</h3>
+
+        <p>
+          Creative strategies and growth support for businesses.
+        </p>
+
+        <a
+          class="division-link"
+          href="mailto:nubarallc@yahoo.com?subject=NUBARA%20Marketing%20Inquiry"
+        >
+          Contact Marketing →
+        </a>
+
+      </div>
+
+      <!-- BUSINESS SOLUTIONS -->
+
+      <div class="division-card">
+
+        <div class="division-icon">
+
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="15"></circle>
+            <path d="M24 16v16"></path>
+            <path d="M16 24h16"></path>
+            <path d="M18.5 18.5l11 11"></path>
+            <path d="M29.5 18.5l-11 11"></path>
+          </svg>
+
+        </div>
+
+        <h3>Business Solutions</h3>
+
+        <p>
+          AI-supported workflows and business systems that help companies grow.
+        </p>
+
+        <a
+          class="division-link"
+          href="business-solutions.html"
+        >
+          Request a Service →
+        </a>
+
+      </div>
+
+      <!-- MEDIA -->
+
+      <div class="division-card">
+
+        <div class="division-icon">
+
+          <svg viewBox="0 0 48 48">
+            <circle cx="24" cy="24" r="17"></circle>
+            <path d="M20 16.5 32 24 20 31.5Z"></path>
+          </svg>
+
+        </div>
+
+        <h3>Media</h3>
+
+        <p>
+          NUBARA content, business insights and original media.
+        </p>
+
+        <a class="division-link" href="#media">
+          Follow NUBARA →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="container about-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          About NUBARA
+        </div>
+
+        <h2>
+          Building a Smarter Tomorrow.
+        </h2>
+
+        <p>
+          NUBARA is a multi-division company building across e-commerce,
+          marketing, AI-business solutions and media. Our goal is to create
+          practical products, useful business solutions and digital assets
+          that help people and businesses grow.
+        </p>
+
+        <div class="about-actions">
 
           <a
             class="btn btn-primary"
-            href="#divisions"
-          >
-            Explore NUBARA
-          </a>
-
-          <a
-            class="btn btn-secondary"
-            href="#contact"
-          >
-            Contact Us
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- DIVISIONS -->
-
-    <section class="divisions" id="divisions">
-
-      <div class="container">
-
-        <div class="section-heading">
-
-          <div class="eyebrow">
-            NUBARA Divisions
-          </div>
-
-          <h2>
-            One Company. Four Growth Engines.
-          </h2>
-
-          <p>
-            NUBARA combines commerce, marketing, AI-powered business support and media under one professional brand.
-          </p>
-
-        </div>
-
-        <div class="division-row">
-
-          <!-- E-COMMERCE -->
-
-          <a
-            class="division-card"
-            href="https://zdtb5v-dw.myshopify.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-
-            <div class="division-icon">
-
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-
-                <path
-                  d="M13 15h22l2 25H11l2-25Z"
-                ></path>
-
-                <path
-                  d="M18 17v-4a6 6 0 0 1 12 0v4"
-                ></path>
-
-              </svg>
-
-            </div>
-
-            <div>
-
-              <h3>
-                E-Commerce
-              </h3>
-
-              <p>
-                Smart products for everyday living.
-              </p>
-
-            </div>
-
-            <span class="division-arrow">
-              ›
-            </span>
-
-          </a>
-
-          <!-- MARKETING -->
-
-          <a
-            class="division-card"
-            href="mailto:nubarallc@yahoo.com?subject=NUBARA%20Marketing%20Inquiry"
-          >
-
-            <div class="division-icon">
-
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-
-                <rect
-                  x="7"
-                  y="27"
-                  width="7"
-                  height="13"
-                  rx="1"
-                ></rect>
-
-                <rect
-                  x="20.5"
-                  y="18"
-                  width="7"
-                  height="22"
-                  rx="1"
-                ></rect>
-
-                <rect
-                  x="34"
-                  y="8"
-                  width="7"
-                  height="32"
-                  rx="1"
-                ></rect>
-
-              </svg>
-
-            </div>
-
-            <div>
-
-              <h3>
-                Marketing
-              </h3>
-
-              <p>
-                Creative strategies that get results.
-              </p>
-
-            </div>
-
-            <span class="division-arrow">
-              ›
-            </span>
-
-          </a>
-
-          <!-- AI BUSINESS SOLUTIONS -->
-
-          <a
-            class="division-card"
             href="business-solutions.html"
           >
-
-            <div class="division-icon">
-
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-
-                <path
-                  d="M24 8c-3.5-4-10-1.5-9.4 3.6-5.4-.6-8.1 5.9-4 9.1-4.6 3.1-2.1 10.1 3.6 9.8-.9 5.1 5.1 8.3 8.8 4.6"
-                ></path>
-
-                <path
-                  d="M24 8c3.5-4 10-1.5 9.4 3.6 5.4-.6 8.1 5.9 4 9.1 4.6 3.1 2.1 10.1-3.6 9.8.9 5.1-5.1 8.3-8.8 4.6"
-                ></path>
-
-                <path
-                  d="M24 8v30"
-                ></path>
-
-                <path
-                  d="M17 14c3 1 4 3 4 6"
-                ></path>
-
-                <path
-                  d="M31 14c-3 1-4 3-4 6"
-                ></path>
-
-                <path
-                  d="M16 28c3-2 5-2 7 0"
-                ></path>
-
-                <path
-                  d="M32 28c-3-2-5-2-7 0"
-                ></path>
-
-              </svg>
-
-            </div>
-
-            <div>
-
-              <h3>
-                AI Business Solutions
-              </h3>
-
-              <p>
-                Smarter workflows for growing businesses.
-              </p>
-
-            </div>
-
-            <span class="division-arrow">
-              ›
-            </span>
-
+            Request a Service
           </a>
-
-          <!-- MEDIA -->
 
           <a
-            class="division-card"
-            href="#media"
+            class="btn btn-outline"
+            href="#contact"
           >
-
-            <div class="division-icon">
-
-              <svg viewBox="0 0 48 48" aria-hidden="true">
-
-                <circle
-                  cx="24"
-                  cy="24"
-                  r="17"
-                ></circle>
-
-                <path
-                  d="M20 16.5 32 24 20 31.5Z"
-                ></path>
-
-              </svg>
-
-            </div>
-
-            <div>
-
-              <h3>
-                Media
-              </h3>
-
-              <p>
-                Content. Insights. Opportunities.
-              </p>
-
-            </div>
-
-            <span class="division-arrow">
-              ›
-            </span>
-
+            Contact NUBARA
           </a>
 
         </div>
 
       </div>
 
-    </section>
+      <div
+        class="about-image"
+        role="img"
+        aria-label="Global NUBARA visual"
+      ></div>
 
-    <!-- ABOUT -->
+    </div>
 
-    <section class="about" id="about">
+  </section>
 
-      <div class="container about-grid">
+  <!-- MEDIA -->
 
-        <div>
+  <section class="media" id="media">
 
-          <div class="eyebrow">
-            About NUBARA
-          </div>
+    <div class="container media-grid">
 
-          <h2>
-            Building a Smarter Tomorrow.
-          </h2>
+      <div>
 
-          <p>
-            NUBARA is building across e-commerce, marketing, AI-business solutions and media.
-            Our goal is to create real opportunities, deliver smart solutions and develop useful
-            businesses and digital assets for long-term growth.
-          </p>
-
+        <div class="eyebrow">
+          NUBARA Media
         </div>
 
-        <div class="about-visual">
+        <h2>
+          Follow NUBARA
+        </h2>
 
-          <div class="about-brand-mark">
-
-            <span class="about-swoosh"></span>
-
-            <span class="about-star-large">
-              ✦
-            </span>
-
-            <span class="about-star-small">
-              ✦
-            </span>
-
-            <div class="about-logo-word">
-              NUBARA
-            </div>
-
-            <div class="about-logo-tagline">
-              Smart Products. Smart Solutions. Smarter Growth.
-            </div>
-
-          </div>
-
-        </div>
+        <p class="media-copy">
+          Follow our official channels for NUBARA business updates,
+          commerce, technology, insights and original media.
+        </p>
 
       </div>
 
-    </section>
+      <div class="media-cards">
 
-    <!-- MEDIA -->
-
-    <section class="media" id="media">
-
-  <div class="container">
-
-    <div class="eyebrow">
-      NUBARA Media
-    </div>
-
-    <h2>
-      Follow NUBARA
-    </h2>
-
-    <p class="media-description">
-      Follow our official channels for NUBARA business updates,
-      commerce, technology, insights and original media.
-    </p>
-
-    <div class="media-cards">
-
-      <!-- TikTok -->
-
-      <a
-        class="media-card"
-        href="https://www.tiktok.com/@nubaraofficial?_r=1&_t=ZP-9A0uVIdhYOl"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <div
-          class="media-icon tiktok-icon"
-          aria-label="TikTok"
+        <a
+          class="media-card"
+          href="https://www.tiktok.com/@nubaraofficial?_r=1&_t=ZP-9A0uVIdhYOl"
+          target="_blank"
+          rel="noopener noreferrer"
         >
 
-          <svg viewBox="0 0 48 48" aria-hidden="true">
-            <path
-              d="M28 7c1.1 5.6 4.3 8.8 10 10v7.4c-3.7-.1-7-1.2-10-3.2v10.6c0 7.5-5.8 12.2-12 12.2-7 0-12-5.3-12-11.8 0-7.2 6.4-12.8 14.1-11.4v7.5c-3.4-.9-6.6 1.3-6.6 4.5 0 2.7 2.2 4.8 4.9 4.8 3.4 0 5-2.5 5-5.8V7H28Z"
-            ></path>
-          </svg>
+          <div class="social-icon tiktok">
+            ♪
+          </div>
 
-        </div>
+          <div>
+            <strong>TikTok</strong>
+            <span>@nubaraofficial</span>
+          </div>
 
-        <div>
+          <span class="media-arrow">›</span>
 
-          <strong>
-            TikTok
-          </strong>
+        </a>
 
-          <span>
-            @nubaraofficial
-          </span>
-
-        </div>
-
-      </a>
-
-      <!-- YouTube -->
-
-      <a
-        class="media-card"
-        href="https://youtube.com/@nubarainsights?si=WKtsBLKBfS_oG-3b"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-        <div
-          class="media-icon youtube-icon"
-          aria-label="YouTube"
+        <a
+          class="media-card"
+          href="https://youtube.com/@nubarainsights?si=WKtsBLKBfS_oG-3b"
+          target="_blank"
+          rel="noopener noreferrer"
         >
 
-          <svg viewBox="0 0 48 48" aria-hidden="true">
-            <path
-              d="M42 15.5c-.5-3-2.2-5-5-5.7C33 9 24 9 24 9s-9 0-13 .8c-2.8.7-4.5 2.7-5 5.7C5.3 19 5.3 24 5.3 24S5.3 29 6 32.5c.5 3 2.2 5 5 5.7C15 39 24 39 24 39s9 0 13-.8c2.8-.7 4.5-2.7 5-5.7.7-3.5.7-8.5.7-8.5s0-5-.7-8.5ZM20 30.5v-13L31 24l-11 6.5Z"
-            ></path>
-          </svg>
+          <div class="social-icon youtube">
+            ▶
+          </div>
 
-        </div>
+          <div>
+            <strong>YouTube</strong>
+            <span>NUBARA Insights</span>
+          </div>
 
-        <div>
+          <span class="media-arrow">›</span>
 
-          <strong>
-            YouTube
-          </strong>
+        </a>
 
-          <span>
-            NUBARA Insights
-          </span>
-
-        </div>
-
-      </a>
+      </div>
 
     </div>
 
-  </div>
+  </section>
 
-</section>
+  <!-- CONTACT -->
 
-    <!-- CONTACT -->
+  <section class="contact" id="contact">
 
-    <section class="contact" id="contact">
+    <div class="container contact-grid">
 
-      <div class="container">
+      <div>
 
         <div class="eyebrow">
           Get In Touch
@@ -1253,34 +1011,113 @@
         </h2>
 
         <p>
-          For marketing, business solutions, partnerships or general inquiries,
-          contact NUBARA directly.
+          Have questions, partnership inquiries, marketing needs,
+          or need help from NUBARA Business Solutions? Contact us directly.
+        </p>
+
+        <div class="contact-buttons">
+
+          <a
+            class="contact-btn contact-email"
+            href="mailto:nubarallc@yahoo.com"
+          >
+            nubarallc@yahoo.com
+          </a>
+
+          <a
+            class="contact-btn request-service"
+            href="business-solutions.html"
+          >
+            Request a Service
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="contact-panel">
+
+        <h3>
+          Business Solutions
+        </h3>
+
+        <p>
+          Need help with customer service, lead follow-up,
+          appointment workflows or business automation?
         </p>
 
         <a
-          class="contact-email"
-          href="mailto:nubarallc@yahoo.com"
+          class="btn btn-primary"
+          href="business-solutions.html"
         >
-          nubarallc@yahoo.com
+          View Services
         </a>
 
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </section>
 
-  <!-- FOOTER -->
+</main>
 
-  <footer>
+<footer>
 
-    <div class="container footer-row">
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div>
+
+        <div class="footer-brand">
+          NUBARA
+        </div>
+
+        <div class="footer-tagline">
+          Smart Products. Smart Solutions. Smarter Growth.
+        </div>
+
+      </div>
+
+      <div class="footer-nav">
+
+        <a href="#home">Home</a>
+
+        <a
+          href="https://zdtb5v-dw.myshopify.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          E-Commerce
+        </a>
+
+        <a href="#divisions">
+          Marketing
+        </a>
+
+        <a href="business-solutions.html">
+          Business Solutions
+        </a>
+
+        <a href="#media">
+          Media
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
 
       <div>
         © 2026 NUBARA LLC. All rights reserved.
       </div>
 
-      <div class="footer-links">
+      <div class="legal-links">
 
         <a href="privacy-policy.html">
           Privacy Policy
@@ -1291,14 +1128,16 @@
         </a>
 
         <a href="business-solutions.html">
-          Business Solutions
+          Request a Service
         </a>
 
       </div>
 
     </div>
 
-  </footer>
+  </div>
+
+</footer>
 
 </body>
 </html>
