@@ -39,8 +39,10 @@ h1, h2, h3 {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(201, 162, 39, 0.25);
 }
-.nav { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 20px; }
-.brand img { height: 56px; width: auto; }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 84px; gap: 20px; }
+.brand { display: flex; flex-direction: column; align-items: flex-start; text-decoration: none; }
+.brand img { height: 48px; width: auto; }
+.brand-tag { font-family: "Montserrat", sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .08em; color: var(--gold-soft); margin-top: 2px; white-space: nowrap; }
 .nav-links { display: flex; align-items: center; gap: 28px; }
 .nav-links a { color: var(--cream); text-decoration: none; font-size: 15px; font-weight: 500; opacity: .85; }
 .nav-links a:hover { opacity: 1; color: var(--gold-soft); }
@@ -103,9 +105,18 @@ h1, h2, h3 {
 .check-item span { color: rgba(255, 248, 231, .65); font-size: 14px; }
 
 /* Check strip */
-.check-strip { background: var(--navy); color: var(--cream); padding: 64px 0; border-top: 3px solid var(--gold); }
+.check-strip {
+  background:
+    linear-gradient(90deg, rgba(18, 29, 53, .92) 0%, rgba(18, 29, 53, .78) 50%, rgba(18, 29, 53, .45) 100%), linear-gradient(0deg, rgba(18, 29, 53, .92) 0%, rgba(18, 29, 53, .2) 45%),
+    url("team-meeting.jpg") center 45% / cover no-repeat,
+    var(--navy);
+  color: var(--cream); padding: 90px 0 80px; border-top: 3px solid var(--gold);
+}
+.about-block { max-width: 760px; margin-bottom: 60px; }
+.about-block h2 { font-size: clamp(30px, 3.6vw, 44px); font-weight: 800; letter-spacing: -.015em; margin-bottom: 18px; }
+.about-block p { font-size: 18px; color: rgba(255, 248, 231, .85); margin: 0 0 14px; }
 .check-strip-head { display: flex; justify-content: space-between; align-items: end; gap: 30px; flex-wrap: wrap; margin-bottom: 34px; }
-.check-strip-head h2 { font-size: clamp(26px, 3vw, 34px); font-weight: 800; }
+.check-strip-head h3 { font-size: clamp(22px, 2.4vw, 28px); font-weight: 700; }
 .check-strip-head p { margin: 0; color: rgba(255, 248, 231, .7); max-width: 420px; }
 .check-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
 .check-tile { background: rgba(255, 248, 231, .05); border: 1px solid rgba(201, 162, 39, .3); border-radius: 16px; padding: 22px 20px; }
@@ -209,7 +220,7 @@ section { padding: 96px 0; }
 @media (max-width: 760px) {
   .menu-toggle { display: block; }
   .nav-links {
-    display: none; position: absolute; top: 76px; left: 0; right: 0;
+    display: none; position: absolute; top: 84px; left: 0; right: 0;
     flex-direction: column; align-items: flex-start; gap: 0;
     background: var(--navy-deep); padding: 10px 22px 22px; border-bottom: 1px solid rgba(201, 162, 39, .25);
   }
@@ -217,6 +228,7 @@ section { padding: 96px 0; }
   .nav-links a { padding: 12px 0; width: 100%; }
   .nav-links .btn { margin-top: 10px; width: auto; }
   .brand img { height: 40px; }
+  .brand-tag { font-size: 10px; }
   .hero { padding: 60px 0 80px; }
   section { padding: 72px 0; }
   .steps, .why-grid, .footer-grid, .check-grid { grid-template-columns: 1fr; }
