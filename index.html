@@ -215,6 +215,12 @@
         </div>
         <label><span>Website or Google listing link <span class="opt">(optional)</span></span><input type="text" name="website_or_listing" placeholder="www.yourbusiness.com"></label>
         <label>City and state<input type="text" name="city_state" placeholder="Atlanta, GA" required></label>
+        <label>How did you hear about us?
+          <select name="heard_about_us" required>
+            <option value="" disabled selected>Choose one</option>
+            <option>Email</option><option>Facebook</option><option>Google</option><option>Referral</option><option>Other</option>
+          </select>
+        </label>
         <label>Best way to reach you
           <select name="best_contact">
             <option>Call</option><option>Text</option><option>Email</option>
@@ -284,7 +290,7 @@
   var st=f.querySelector('.form-status'), btn=f.querySelector('button[type=submit]');
   f.addEventListener('submit', function(e){
     e.preventDefault();
-    if(!f.checkValidity()){ st.textContent='Please fill in your name, business, phone, email, and city.'; st.className='form-status err'; f.reportValidity(); return; }
+    if(!f.checkValidity()){ st.textContent='Please fill in your name, business, phone, email, city, and how you heard about us.'; st.className='form-status err'; f.reportValidity(); return; }
     btn.disabled=true; btn.textContent='Sending...'; st.textContent=''; st.className='form-status';
     fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))})
       .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.success!==false,j:j};});})
