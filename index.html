@@ -47,7 +47,7 @@
       <a href="#how">How It Works</a>
       <a href="#why">Why NUBARA</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn-gold" href="#contact">Free Visibility Check</a>
+      <a class="btn btn-gold" href="#check">Free Visibility Check</a>
     </nav>
   </div>
 </header>
@@ -61,7 +61,7 @@
         <h1>Get found.<br>Get booked.<br><span class="gold">Grow.</span></h1>
         <p class="lead">NUBARA helps businesses of every size get seen online, win more customers, and run smarter with AI. Practical, affordable, and fully remote.</p>
         <div class="hero-ctas">
-          <a class="btn btn-gold" href="mailto:info@nubaragroup.com?subject=Free%2010-Minute%20Visibility%20Check&body=Business%20name%3A%0AWebsite%20or%20Google%20listing%3A%0ABest%20way%20to%20reach%20you%3A">Get a Free 10-Minute Visibility Check</a>
+          <a class="btn btn-gold" href="#check">Get a Free 10-Minute Visibility Check</a>
           <a class="btn btn-ghost" href="#services">See Our Services</a>
         </div>
         <p class="hero-contact">Call or text <a href="tel:+14707980045">470-798-0045</a> or email <a href="mailto:info@nubaragroup.com">info@nubaragroup.com</a> for your free 10-minute visibility check.</p>
@@ -189,6 +189,45 @@
     </div>
   </section>
 
+  <section id="check">
+    <div class="wrap check-grid">
+      <div class="section-head check-head">
+        <span class="eyebrow">Free 10-Minute Visibility Check</span>
+        <h2>See what customers see when they look you up.</h2>
+        <p>Tell us about your business. We'll check your Google listing, website, social pages, and how AI search answers about you, then reply with what we found and the first thing to fix. No cost, no obligation.</p>
+        <ul class="check-list">
+          <li>Google Business Profile</li>
+          <li>Website and contact info</li>
+          <li>Social media presence</li>
+          <li>How ChatGPT and Google AI describe you</li>
+        </ul>
+      </div>
+      <form id="check-form" class="check-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY">
+        <input type="hidden" name="subject" value="New Free Visibility Check Request (nubaragroup.com)">
+        <input type="hidden" name="from_name" value="NUBARA Website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+        <label>Business name<input type="text" name="business_name" autocomplete="organization" required></label>
+        <div class="two">
+          <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <label><span>Website or Google listing link <span class="opt">(optional)</span></span><input type="text" name="website_or_listing" placeholder="www.yourbusiness.com"></label>
+        <label>City and state<input type="text" name="city_state" placeholder="Atlanta, GA" required></label>
+        <label>Best way to reach you
+          <select name="best_contact">
+            <option>Call</option><option>Text</option><option>Email</option>
+          </select>
+        </label>
+        <label><span>Anything we should know? <span class="opt">(optional)</span></span><textarea name="message" rows="3"></textarea></label>
+        <button type="submit" class="btn btn-gold">Request My Free Check</button>
+        <p class="form-note">By submitting, you agree we may contact you about your request. See our <a href="privacy-policy.html">Privacy Policy</a>. Prefer to talk? Call or text <a href="tel:+14707980045">470-798-0045</a>.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
   <section id="contact" style="padding-top:0">
     <div class="wrap">
       <div class="cta-band">
@@ -218,7 +257,7 @@
         <h4>Contact</h4>
         <a href="mailto:info@nubaragroup.com">info@nubaragroup.com</a>
         <a href="tel:+14707980045">470-798-0045</a>
-        <a href="#contact">Free Visibility Check</a>
+        <a href="#check">Free Visibility Check</a>
       </div>
       <div>
         <h4>Follow Us</h4>
@@ -238,6 +277,25 @@
   document.querySelectorAll('.nav-links a').forEach(function (a) {
     a.addEventListener('click', function () { document.querySelector('.nav-links').classList.remove('open'); });
   });
+</script>
+<script>
+(function(){
+  var f=document.getElementById('check-form'); if(!f) return;
+  var st=f.querySelector('.form-status'), btn=f.querySelector('button[type=submit]');
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){ st.textContent='Please fill in your name, business, phone, email, and city.'; st.className='form-status err'; f.reportValidity(); return; }
+    btn.disabled=true; btn.textContent='Sending...'; st.textContent=''; st.className='form-status';
+    fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.success!==false,j:j};});})
+      .then(function(x){
+        if(x.ok){ f.reset(); st.textContent="Thank you! We received your request and will reach out within 1 business day."; st.className='form-status ok'; }
+        else { throw new Error(x.j&&x.j.message||'Error'); }
+      })
+      .catch(function(){ st.innerHTML='Something went wrong. Please call or text <a href="tel:+14707980045">470-798-0045</a> or email <a href="mailto:info@nubaragroup.com">info@nubaragroup.com</a>.'; st.className='form-status err'; })
+      .finally(function(){ btn.disabled=false; btn.textContent='Request My Free Check'; });
+  });
+})();
 </script>
 </body>
 </html>
