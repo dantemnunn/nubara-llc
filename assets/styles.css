@@ -243,3 +243,10 @@ section { padding: 96px 0; }
   .hero-ctas .btn { width: 100%; }
   .footer-bottom a { margin: 0 18px 0 0; }
 }
+
+/* Visibility check contact line */
+.cta-band p a { color: var(--gold, #C9A227); font-weight: 700; text-decoration: none; }
+.cta-band p a:hover { text-decoration: underline; }
+.hero-contact { margin: 18px 0 0; font-size: 16px; opacity: .9; }
+.hero-contact a { color: #C9A227; font-weight: 700; text-decoration: none; }
+.hero-contact a:hover { text-decoration: underline; }
