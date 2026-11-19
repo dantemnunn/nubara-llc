@@ -12,8 +12,9 @@
   var bar = $('#promo-bar');
   if (bar) {
     if (now < Date.parse(P.bannerUntil || P.end)) {
-      bar.className = 'promo-bar';
-      bar.innerHTML = '<a href="giveaway/">' + esc(P.bannerText) + ' <strong>Enter now</strong></a>';
+      bar.className = 'promo-bar' + (P.bannerImage ? ' promo-bar-img' : '');
+      if (P.bannerImage) bar.style.backgroundImage = 'linear-gradient(90deg, rgba(18,29,53,.92) 0%, rgba(18,29,53,.75) 45%, rgba(18,29,53,.25) 100%), url(' + P.bannerImage + ')';
+      bar.innerHTML = '<a href="giveaway/"><span class="pb-text"><span class="pb-eyebrow">' + esc(P.eyebrow) + '</span><span class="pb-main">' + esc(P.bannerText) + '</span></span><strong class="pb-btn">Enter now</strong></a>';
       bar.hidden = false;
     }
     return;

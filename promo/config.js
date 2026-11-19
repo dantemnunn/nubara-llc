@@ -31,7 +31,8 @@ window.NUBARA_PROMO = {
   startLabel: "November 20, 2026 at 12:00 AM ET",
   endLabel: "November 25, 2026 at 11:59 PM ET",
   announceLabel: "November 26, 2026",
-  bannerText: "Thanksgiving Giveaway: win $75. Enter by Nov 25.",
+  bannerText: "Win $75 this Thanksgiving. Enter by Nov 25.",
+  bannerImage: "promo/thanksgiving-banner.jpg",
   bannerUntil: "2026-11-27T00:00:00-05:00",
   /* How people enter: "facebook" (comment on a post) or "form" (website form + Google Sheet). */
   entry: "facebook",

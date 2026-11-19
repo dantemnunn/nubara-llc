@@ -8,6 +8,12 @@
 .promo-bar { background: linear-gradient(90deg, #C9A227, #E2C76A); color: #121D35; font-weight: 600; font-size: 15px; }
 .promo-bar a { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 11px 16px; text-decoration: none; color: inherit; text-align: center; }
 .promo-bar strong { text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.promo-bar-img { background-size: cover; background-position: center 55%; color: var(--cream); border-bottom: 2px solid var(--gold); }
+.promo-bar-img a { justify-content: space-between; max-width: var(--max); margin: 0 auto; padding: 22px 22px; gap: 16px; text-align: left; }
+.pb-text { display: grid; gap: 2px; }
+.pb-eyebrow { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-soft); font-weight: 700; }
+.pb-main { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: clamp(17px, 2.2vw, 24px); color: var(--cream); }
+.promo-bar-img .pb-btn { text-decoration: none; background: var(--gold); color: var(--navy-deep); padding: 10px 20px; border-radius: 999px; font-size: 15px; box-shadow: 0 8px 20px rgba(0,0,0,.25); }
 
 /* Hero */
 .gv-hero { position: relative; overflow: hidden; color: var(--cream); padding: 84px 0 96px;
