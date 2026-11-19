@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thanksgiving Giveaway | NUBARA Group</title>
-  <meta name="description" content="Enter the NUBARA Group Thanksgiving Giveaway for a chance to win $75. Free to enter. U.S. residents 18+. No purchase or social media required.">
+  <meta name="description" content="Giving Thanks. Giving Back. Enter the NUBARA Group Thanksgiving Giveaway for a chance to win $75. Free to enter on our website. U.S. residents 18+.">
   <link rel="canonical" href="https://www.nubaragroup.com/giveaway/">
   <meta property="og:title" content="Win $75 This Thanksgiving | NUBARA Group">
-  <meta property="og:description" content="Free to enter. One winner gets $50 Cash App + a $25 Amazon gift card. U.S. residents 18+.">
+  <meta property="og:description" content="Giving Thanks. Giving Back. One winner gets $50 Cash App + a $25 Amazon gift card. Free to enter. U.S. residents 18+.">
   <meta property="og:url" content="https://www.nubaragroup.com/giveaway/">
+  <meta property="og:image" content="https://www.nubaragroup.com/promo/thanksgiving-hero.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,27 +29,25 @@
 </header>
 
 <main>
+  <!-- SECTION 1: GIVEAWAY -->
   <section class="gv-hero">
     <svg class="gv-leaves" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <g fill="none" stroke="#C9A227" stroke-width="1.2" opacity=".55">
         <path d="M1040 90c40-30 90-20 110 20-50 10-80 40-110-20z"/><path d="M1040 90c25 5 60 0 110 20"/>
         <path d="M30 575c30-40 85-40 105-5-45 15-75 35-105 5z"/><path d="M30 575c25-2 60-10 105-5"/>
-        <path d="M980 470c40-15 80 5 85 45-45-5-75 5-85-45z"/><path d="M980 470c20 10 50 25 85 45"/>
-      </g>
-      <g fill="#C1652A" opacity=".18">
-        <circle cx="1100" cy="380" r="70"/><circle cx="70" cy="120" r="45"/>
       </g>
     </svg>
     <div class="wrap">
       <div>
-        <span class="eyebrow" data-p="eyebrow">Thanksgiving Giveaway</span>
+        <span class="eyebrow" data-p="eyebrow">Giving Thanks. Giving Back.</span>
         <h1 data-p="headline-html">Win <span class="gold">$75</span> This Thanksgiving</h1>
-        <p class="lead" data-p="intro">We're thankful for every business owner and neighbor who supports NUBARA. To say thanks, we're giving one lucky winner a $75 holiday prize. Free to enter, no purchase and no social media required.</p>
+        <p class="lead" data-p="intro">This Thanksgiving, NUBARA Group is celebrating small business owners, entrepreneurs and individuals nationwide. To say thanks, one lucky winner gets a $75 holiday prize. Free to enter. No purchase necessary.</p>
         <div class="gv-facts">
           <span class="gv-chip" data-p="window">Enter Nov 20 to Nov 25, 2026</span>
           <span class="gv-chip" data-p="announce-chip">Winner announced Nov 26</span>
           <span class="gv-chip">U.S. residents 18+</span>
         </div>
+        <a class="btn btn-gold gv-hero-cta" href="#enter">Enter the Giveaway</a>
       </div>
       <div class="gv-prize">
         <div class="label">Grand prize &middot; <span data-p="winners-text">1 winner</span></div>
@@ -67,21 +66,92 @@
     <div class="wrap">
       <div class="gv-steps">
         <span class="eyebrow" style="color:#9A7A14">How to enter</span>
-        <h2>Enter on Facebook</h2>
+        <h2>Enter right here in under a minute</h2>
         <ol>
-          <li>Go to our giveaway post on the NUBARA Facebook page.</li>
-          <li>Comment <strong data-p="commentWord">GIVEAWAY</strong> on the post.</li>
-          <li>That's it. One winner is picked at random.</li>
+          <li>Fill in your name, email and state.</li>
+          <li>Confirm you're 18 or older and agree to the rules.</li>
+          <li>Tap <strong>Enter Giveaway</strong>. That's it.</li>
         </ol>
-        <p class="fine">One entry per person (extra comments don't add entries). U.S. residents 18+. No purchase necessary. Read the <a href="rules.html">Official Rules</a>.</p>
+        <p class="fine">One entry per person and email. No purchase, follow, like, comment or share required. The winner is picked at random on <span data-p="announceLabel">November 26, 2026</span> and notified by email. Read the <a href="rules.html">Official Rules</a>.</p>
       </div>
 
-      <div class="gv-card gv-fb-card">
-        <h3>Ready to enter?</h3>
-        <p class="sub">Comment <strong data-p="commentWord">GIVEAWAY</strong> on our Facebook giveaway post between <span data-p="window-plain">Nov 20 and Nov 25</span>. Winner announced <span data-p="announceLabel">November 26, 2026</span>.</p>
-        <a class="btn btn-gold" id="gv-fb" href="https://www.facebook.com/share/1UodZsdjBU/" target="_blank" rel="noopener" style="width:100%;font-size:17px;padding:16px 24px">Enter on Facebook</a>
-        <p class="fine" style="margin:14px 0 0;font-size:13px;color:var(--muted)">This giveaway is not sponsored, endorsed, or administered by, or associated with, Facebook.</p>
+      <div class="gv-card" id="gv-card">
+        <div id="gv-form-wrap">
+          <h3>Enter the giveaway</h3>
+          <p class="sub">We only use this to run the giveaway and contact the winner. You won't be added to any mailing list.</p>
+          <form class="gv-form" id="gv-form" novalidate>
+            <label class="f">Full name<input type="text" name="name" autocomplete="name" maxlength="80" required></label>
+            <label class="f">Email address<input type="email" name="email" autocomplete="email" maxlength="120" required></label>
+            <label class="f">State of residence
+              <select name="state" required>
+                <option value="">Select your state</option>
+                <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>District of Columbia</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+              </select>
+            </label>
+            <label class="gv-check"><input type="checkbox" name="age" required><span>I confirm I am 18 years of age or older and a legal U.S. resident.</span></label>
+            <label class="gv-check"><input type="checkbox" name="rules" required><span>I agree to the <a href="rules.html" target="_blank" rel="noopener">Official Giveaway Rules</a>.</span></label>
+            <div class="gv-hp" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn btn-gold" type="submit">Enter Giveaway</button>
+            <p class="gv-status" id="gv-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: SUPPORT SMALL BUSINESSES -->
+  <section class="gv-biz" id="business">
+    <div class="wrap">
+      <div class="gv-biz-copy">
+        <span class="eyebrow" style="color:#9A7A14">Support Small Businesses</span>
+        <h2>Your Business Deserves to Be Seen.</h2>
+        <p class="gv-biz-lead">NUBARA Group helps small businesses, entrepreneurs and growing brands get found, look professional and run smarter.</p>
+        <div class="gv-svc">
+          <div><b>Marketing</b><span>Google Business Profile, local SEO, social strategy and ads that turn searches into customers.</span></div>
+          <div><b>Content Creation</b><span>Flyers, short videos, captions and monthly content that make your brand recognizable.</span></div>
+          <div><b>AI Business Solutions</b><span>AI assistants, chatbots, automated follow-up and booking that save you time.</span></div>
+          <div><b>Website Development</b><span>Clean, fast, mobile-friendly websites built to bring in calls and leads.</span></div>
+        </div>
+      </div>
+
+      <div class="gv-card" id="lead-card">
+        <div id="lead-wrap">
+          <h3>Get Your FREE Business Visibility Check</h3>
+          <p class="sub">We'll look at how customers find you online and send back what we found and the first thing to fix. No cost, no obligation.</p>
+          <form class="gv-form" id="lead-form" novalidate>
+            <label class="f">Full name<input type="text" name="name" autocomplete="name" maxlength="80" required></label>
+            <label class="f">Business name<input type="text" name="company" autocomplete="organization" maxlength="120" required></label>
+            <label class="f">Email address<input type="email" name="email" autocomplete="email" maxlength="120" required></label>
+            <label class="f"><span>Business website <span class="opt">(optional)</span></span><input type="text" name="site" inputmode="url" maxlength="200" placeholder="www.yourbusiness.com"></label>
+            <label class="f">Service interested in
+              <select name="service" id="lead-service" required>
+                <option value="">Choose one</option>
+              </select>
+            </label>
+            <label class="gv-check"><input type="checkbox" name="consent" required><span>I agree that NUBARA Group may contact me by email about my visibility check and services I asked about. I can opt out any time. See our <a href="../privacy-policy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+            <div class="gv-hp" aria-hidden="true"><label>Leave blank<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn btn-navy" type="submit">Get My FREE Visibility Check</button>
+            <p class="gv-status" id="lead-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="gv-note">Optional. This is separate from the giveaway and does not affect eligibility or your chances of winning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: COMMUNITY -->
+  <section class="gv-community" id="community">
+    <div class="wrap">
+      <span class="eyebrow">Connect With Our Community</span>
+      <h2>Come say hello. Bring your business with you.</h2>
+      <p>Follow NUBARA on Facebook and Instagram for small business tips, spotlights and future giveaways. Own a business? Introduce yourself in the comments of our posts. Tell us what you do and where you're based so our community can find you.</p>
+      <div class="gv-social">
+        <a class="btn btn-gold" id="gv-fb" href="https://www.facebook.com/share/1UodZsdjBU/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.3-1.5 1.5-1.5h1.5V4.4c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2.4H8v3h2.6V21h2.9z"/></svg>Facebook</a>
+        <a class="btn btn-ghost" id="gv-ig" href="https://www.instagram.com/nubaraofficial" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm4.9-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM12 4.6c2.4 0 2.7 0 3.6.1 2.4.1 3.6 1.3 3.7 3.7.1.9.1 1.2.1 3.6s0 2.7-.1 3.6c-.1 2.4-1.3 3.6-3.7 3.7-.9.1-1.2.1-3.6.1s-2.7 0-3.6-.1c-2.4-.1-3.6-1.3-3.7-3.7-.1-.9-.1-1.2-.1-3.6s0-2.7.1-3.6C4.8 6 6 4.8 8.4 4.7c.9-.1 1.2-.1 3.6-.1zM12 3c-2.4 0-2.8 0-3.7.1C5 3.2 3.2 5 3.1 8.3 3 9.2 3 9.6 3 12s0 2.8.1 3.7c.1 3.3 1.9 5.1 5.2 5.2.9.1 1.3.1 3.7.1s2.8 0 3.7-.1c3.3-.1 5.1-1.9 5.2-5.2.1-.9.1-1.3.1-3.7s0-2.8-.1-3.7C20.8 5 19 3.2 15.7 3.1 14.8 3 14.4 3 12 3z"/></svg>Instagram</a>
+      </div>
+      <p class="gv-note light">Following, commenting and business inquiries are always optional. They are not a way to enter and never affect giveaway eligibility or your chances of winning.</p>
     </div>
   </section>
 </main>

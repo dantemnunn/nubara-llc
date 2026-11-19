@@ -67,6 +67,31 @@
 .gv-closed h3 { font-size: 22px; margin-bottom: 8px; }
 .gv-closed p { color: var(--muted); margin: 0; }
 
+.gv-hero-cta { margin-top: 26px; }
+.gv-form .opt { font-weight: 400; color: var(--muted); }
+.gv-note { font-size: 13px; color: var(--muted); margin: 14px 0 0; }
+.gv-note.light { color: rgba(255,248,231,.65); max-width: 640px; margin: 22px auto 0; }
+
+/* Section 2: Support Small Businesses */
+.gv-biz { padding: 84px 0; background: var(--cream-deep); border-top: 1px solid var(--line); }
+.gv-biz .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.gv-biz h2 { font-size: clamp(30px, 3.8vw, 46px); font-weight: 800; letter-spacing: -.015em; margin-bottom: 14px; }
+.gv-biz-lead { color: var(--muted); font-size: 18px; margin: 0 0 26px; }
+.gv-svc { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.gv-svc div { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 14px; padding: 16px 16px 14px; }
+.gv-svc b { display: block; font-family: "Montserrat", sans-serif; font-size: 16px; color: var(--navy); margin-bottom: 4px; }
+.gv-svc span { font-size: 14px; color: var(--muted); line-height: 1.45; }
+.gv-form .btn-navy { width: 100%; font-size: 17px; padding: 16px 24px; border: 0; cursor: pointer; }
+
+/* Section 3: Community */
+.gv-community { padding: 84px 0; background: var(--navy-deep); color: var(--cream); text-align: center; }
+.gv-community h2 { font-size: clamp(28px, 3.6vw, 42px); font-weight: 800; color: var(--cream); margin: 4px 0 14px; }
+.gv-community p { max-width: 680px; margin: 0 auto; color: rgba(255,248,231,.85); font-size: 17px; }
+.gv-community .eyebrow { color: var(--gold-soft); }
+.gv-social { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
+.gv-social .btn { display: inline-flex; align-items: center; gap: 10px; min-width: 170px; justify-content: center; }
+.gv-social svg { width: 20px; height: 20px; }
+
 /* Rules page */
 .gv-rules { max-width: 820px; margin: 0 auto; padding: 56px 22px 80px; }
 .gv-rules h1 { font-size: clamp(30px, 4vw, 42px); font-weight: 800; margin-bottom: 6px; }
@@ -75,7 +100,8 @@
 .gv-rules .nopurchase { font-weight: 700; color: var(--navy); background: #fff; border-left: 4px solid var(--gold); padding: 14px 18px; border-radius: 10px; }
 
 @media (max-width: 900px) {
-  .gv-hero .wrap, .gv-entry .wrap { grid-template-columns: 1fr; gap: 36px; }
+  .gv-hero .wrap, .gv-entry .wrap, .gv-biz .wrap { grid-template-columns: 1fr; gap: 36px; }
+  .gv-biz, .gv-community { padding: 56px 0; }
   .gv-hero { padding: 56px 0 64px; }
   .gv-entry { padding: 56px 0; }
 }
@@ -83,4 +109,6 @@
   .gv-card { padding: 22px 18px; }
   .gv-prize { padding: 26px 18px; }
   .promo-bar { font-size: 14px; }
+  .gv-svc { grid-template-columns: 1fr; }
+  .gv-social .btn { width: 100%; }
 }
