@@ -33,6 +33,10 @@
   set('winners', String(P.winners)); set('prizeTotal-plain', esc(P.prizeTotal));
   if (document.title.indexOf('Official Rules') === -1) document.title = P.name.replace('NUBARA ', '') + ' | NUBARA Group';
 
+  set('commentWord', esc(P.commentWord || 'GIVEAWAY'));
+  set('window-plain', short(P.start) + ' and ' + short(P.end));
+  var fb = $('#gv-fb'); if (fb && P.facebookUrl) fb.href = P.facebookUrl;
+
   /* Countdown */
   var cd = $('[data-p="countdown"]');
   function tick() {

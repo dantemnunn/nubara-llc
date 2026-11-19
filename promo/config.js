@@ -33,6 +33,10 @@ window.NUBARA_PROMO = {
   announceLabel: "November 26, 2026",
   bannerText: "Thanksgiving Giveaway: win $75. Enter by Nov 25.",
   bannerUntil: "2026-11-27T00:00:00-05:00",
-  /* Google Apps Script web app URL (see promo/apps-script.gs). */
+  /* How people enter: "facebook" (comment on a post) or "form" (website form + Google Sheet). */
+  entry: "facebook",
+  facebookUrl: "https://www.facebook.com/share/1UodZsdjBU/",
+  commentWord: "GIVEAWAY",
+  /* For entry "form" only: Google Apps Script web app URL (see promo/apps-script.gs). */
   endpoint: ""
 };
