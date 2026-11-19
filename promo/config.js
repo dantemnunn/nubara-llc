@@ -17,7 +17,7 @@ window.NUBARA_PROMO = {
   name: "NUBARA Thanksgiving Giveaway",
   eyebrow: "Thanksgiving Giveaway",
   headline: "Win $75 This Thanksgiving",
-  intro: "We're thankful for every business owner and neighbor who supports NUBARA. To say thanks, we're giving one lucky winner a $75 holiday prize. Free to enter, no purchase and no social media required.",
+  intro: "We're thankful for every business owner and neighbor who supports NUBARA. To say thanks, we're giving one lucky winner a $75 holiday prize. Free to enter, no purchase necessary.",
   prizeTotal: "$75",
   prizes: [
     { amount: "$50", label: "Cash App" },
@@ -32,6 +32,7 @@ window.NUBARA_PROMO = {
   endLabel: "November 25, 2026 at 11:59 PM ET",
   announceLabel: "November 26, 2026",
   bannerText: "Win $75 this Thanksgiving. Enter by Nov 25.",
+  heroImage: "../promo/thanksgiving-hero.jpg",
   bannerImage: "promo/thanksgiving-banner.jpg",
   bannerUntil: "2026-11-27T00:00:00-05:00",
   /* How people enter: "facebook" (comment on a post) or "form" (website form + Google Sheet). */

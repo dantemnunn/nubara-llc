@@ -21,6 +21,11 @@
   }
 
   document.body.className = 'promo-theme-' + (P.theme || 'standard');
+  var hero = $('.gv-hero');
+  if (hero && P.heroImage) {
+    hero.style.background = 'linear-gradient(90deg, rgba(18,29,53,.94) 0%, rgba(18,29,53,.82) 45%, rgba(18,29,53,.55) 100%), linear-gradient(0deg, rgba(18,29,53,.7) 0%, rgba(18,29,53,0) 40%), url(' + P.heroImage + ') center / cover no-repeat, #121D35';
+    var lv = hero.querySelector('.gv-leaves'); if (lv) lv.style.display = 'none';
+  }
   set('eyebrow', esc(P.eyebrow));
   set('headline-html', esc(P.headline).replace(esc(P.prizeTotal), '<span class="gold">' + esc(P.prizeTotal) + '</span>'));
   set('intro', esc(P.intro));
