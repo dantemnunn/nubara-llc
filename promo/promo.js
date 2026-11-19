@@ -28,6 +28,8 @@
     hero.style.background = 'linear-gradient(90deg, rgba(18,29,53,.94) 0%, rgba(18,29,53,.82) 45%, rgba(18,29,53,.55) 100%), linear-gradient(0deg, rgba(18,29,53,.7) 0%, rgba(18,29,53,0) 40%), url(' + P.heroImage + ') center / cover no-repeat, #121D35';
     var lv = hero.querySelector('.gv-leaves'); if (lv) lv.style.display = 'none';
   }
+  var prize = $('.gv-prize');
+  if (prize && P.prizeImage) prize.style.background = 'linear-gradient(160deg, rgba(27,42,74,.72), rgba(18,29,53,.88)), url(' + P.prizeImage + ') center / cover no-repeat, #121D35';
   var comm = $('.gv-community');
   if (comm && P.communityImage) comm.style.background = 'linear-gradient(0deg, rgba(18,29,53,.93), rgba(18,29,53,.86)), url(' + P.communityImage + ') center / cover no-repeat, #121D35';
 

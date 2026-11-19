@@ -36,6 +36,7 @@ window.NUBARA_PROMO = {
 
   /* Photos */
   heroImage: "../promo/thanksgiving-hero.jpg",
+  prizeImage: "../promo/thanksgiving-prize.jpg",
   communityImage: "../promo/thanksgiving-banner.jpg",
   bannerImage: "promo/thanksgiving-banner.jpg",
 
