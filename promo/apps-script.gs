@@ -9,7 +9,7 @@
  * Add each new giveaway to CAMPAIGNS (same id as promo/config.js).
  */
 var CAMPAIGNS = {
-  'thanksgiving-2026': { start: '2026-11-20T00:00:00-05:00', end: '2026-11-25T23:59:59-05:00' }
+  'thanksgiving-2026': { start: '2026-11-19T16:20:00-05:00', end: '2026-11-25T23:59:59-05:00' }
 };
 var SHEET = 'Entries';
 var STATES = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];

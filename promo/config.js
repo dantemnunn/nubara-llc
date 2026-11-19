@@ -27,10 +27,10 @@ window.NUBARA_PROMO = {
   ],
   prizeRulesText: "$50 sent via Cash App and one (1) $25 Amazon.com eGift Card",
   winners: 1,
-  start: "2026-11-20T00:00:00-05:00",
+  start: "2026-11-19T16:20:00-05:00",
   end: "2026-11-25T23:59:59-05:00",
   announce: "2026-11-26",
-  startLabel: "November 20, 2026 at 12:00 AM ET",
+  startLabel: "November 19, 2026 at 4:20 PM ET",
   endLabel: "November 25, 2026 at 11:59 PM ET",
   announceLabel: "November 26, 2026",
 
