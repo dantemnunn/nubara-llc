@@ -279,3 +279,23 @@ section { padding: 96px 0; }
   .check-form .two { grid-template-columns: 1fr; }
 }
 #check { scroll-margin-top: 80px; }
+
+/* Quiz promo (homepage #check) */
+.quiz-promo { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 26px; padding: 18px 20px; border-radius: 16px; background: var(--navy); color: var(--cream); text-decoration: none; border-left: 4px solid var(--gold); box-shadow: 0 14px 34px rgba(18, 29, 53, .18); transition: transform .15s; }
+.quiz-promo:hover { transform: translateY(-2px); }
+.qp-text { display: grid; gap: 3px; }
+.qp-eyebrow { font-family: "Montserrat", sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-soft); }
+.qp-text strong { font-family: "Montserrat", sans-serif; font-size: 17px; color: #fff; }
+.qp-text span:last-child { font-size: 14.5px; color: rgba(255, 248, 231, .8); }
+.qp-btn { flex: 0 0 auto; background: var(--gold); color: var(--navy-deep); font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 14px; padding: 11px 16px; border-radius: 999px; white-space: nowrap; }
+@media (max-width: 520px) { .quiz-promo { flex-direction: column; align-items: stretch; text-align: left; } .qp-btn { text-align: center; } }
+
+/* Photo panel behind "See what customers see" */
+.check-photo { background: linear-gradient(160deg, rgba(18, 29, 53, .82) 0%, rgba(27, 42, 74, .78) 55%, rgba(18, 29, 53, .90) 100%), url(check-team.jpg) center / cover no-repeat, var(--navy); border-radius: 22px; padding: 36px 30px; box-shadow: 0 24px 60px rgba(18, 29, 53, .22); border-top: 4px solid var(--gold); }
+.check-photo .eyebrow { color: var(--gold-soft); }
+.check-photo h2 { color: #fff; }
+.check-photo p { color: rgba(255, 248, 231, .88); }
+.check-photo .check-list li { color: #fff; }
+.check-photo .check-list li::before { box-shadow: inset 0 0 0 4px var(--navy); }
+.check-photo .quiz-promo { background: rgba(18, 29, 53, .78); border: 1px solid rgba(201, 162, 39, .55); border-left: 4px solid var(--gold); }
+@media (max-width: 520px) { .check-photo { padding: 28px 20px; } }
