@@ -307,3 +307,8 @@ section { padding: 96px 0; }
 #why { background: linear-gradient(180deg, rgba(255, 248, 231, .90) 0%, rgba(255, 248, 231, .80) 55%, rgba(255, 248, 231, .55) 100%), url(savannah-riverfront.jpg) center 70% / cover no-repeat, var(--cream); }
 #score .cta-band { background: linear-gradient(120deg, rgba(18, 29, 53, .94), rgba(27, 42, 74, .86) 60%, rgba(36, 54, 92, .80)), url(cafe-business.jpg) center / cover no-repeat, var(--navy); }
 #contact .cta-band { background: linear-gradient(120deg, rgba(18, 29, 53, .93), rgba(27, 42, 74, .82) 60%, rgba(36, 54, 92, .70)), url(atlanta-ballpark.jpg) center 60% / cover no-repeat, var(--navy); }
+/* Hero eyebrow + service pills */
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.hero-eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--gold); }
+.hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.hero-pills span { font-family: "Montserrat", sans-serif; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; color: var(--cream); padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(201, 162, 39, .55); background: rgba(18, 29, 53, .45); }
