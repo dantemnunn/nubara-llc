@@ -299,3 +299,12 @@ section { padding: 96px 0; }
 .check-photo .check-list li::before { box-shadow: inset 0 0 0 4px var(--navy); }
 .check-photo .quiz-promo { background: rgba(18, 29, 53, .78); border: 1px solid rgba(201, 162, 39, .55); border-left: 4px solid var(--gold); }
 @media (max-width: 520px) { .check-photo { padding: 28px 20px; } }
+
+/* Section photos (added Nov 21) */
+.steps-section { background: linear-gradient(180deg, rgba(18, 29, 53, .88), rgba(27, 42, 74, .84)), url(office-floor.jpg) center / cover no-repeat, var(--navy); }
+.steps-section .section-head .eyebrow { color: var(--gold-soft); }
+.steps-section .section-head h2 { color: #fff; }
+.steps-section .section-head p { color: rgba(255, 248, 231, .85); }
+#why { background: linear-gradient(180deg, rgba(255, 248, 231, .90) 0%, rgba(255, 248, 231, .80) 55%, rgba(255, 248, 231, .55) 100%), url(savannah-riverfront.jpg) center 70% / cover no-repeat, var(--cream); }
+#score .cta-band { background: linear-gradient(120deg, rgba(18, 29, 53, .94), rgba(27, 42, 74, .86) 60%, rgba(36, 54, 92, .80)), url(cafe-business.jpg) center / cover no-repeat, var(--navy); }
+#contact .cta-band { background: linear-gradient(120deg, rgba(18, 29, 53, .93), rgba(27, 42, 74, .82) 60%, rgba(36, 54, 92, .70)), url(atlanta-ballpark.jpg) center 60% / cover no-repeat, var(--navy); }
