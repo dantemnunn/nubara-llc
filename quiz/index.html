@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can Customers Find Your Business? | NUBARA Group</title>
+<meta name="description" content="Free 1-minute quiz from NUBARA Group. Answer 5 quick questions and see the one gap most likely keeping customers from finding your business.">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#1B2A4A;--navy-deep:#121D35;--navy-soft:#24365C;--gold:#C9A227;--gold-soft:#E2C76A;--cream:#FFF8E7;--cream-deep:#F5EAD0;--muted:#5B6680;--line:rgba(27,42,74,.12)}
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:var(--cream);color:var(--navy);font-family:Inter,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.55;font-size:17px;min-height:100vh;display:flex;flex-direction:column}
+  h1,h2,h3{font-family:Montserrat,Inter,Arial,sans-serif;line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}
+  p{margin:0 0 12px}
+  a{color:inherit}
+
+  /* Header (same look as nubaragroup.com) */
+  .site-header{background:var(--navy-deep);border-bottom:3px solid var(--gold)}
+  .nav{max-width:1160px;margin:0 auto;padding:0 18px;height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .brand{display:flex;flex-direction:column;align-items:flex-start;text-decoration:none}
+  .brand img{height:42px;width:auto;display:block}
+  .brand-tag{font-family:Montserrat,sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.08em;color:var(--gold-soft);margin-top:2px;white-space:nowrap}
+  .nav-link{color:var(--cream);font-size:14px;font-weight:500;text-decoration:none;opacity:.85;border:1px solid rgba(255,248,231,.35);border-radius:999px;padding:8px 14px;white-space:nowrap}
+  .nav-link:hover{opacity:1;border-color:var(--gold)}
+
+  /* Hero band */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(18,29,53,.88) 0%,rgba(27,42,74,.80) 55%,rgba(18,29,53,.92) 100%),radial-gradient(ellipse at 85% 0%,rgba(201,162,39,.30),transparent 55%),url(quiz-hero.jpg) center/cover no-repeat,var(--navy);color:var(--cream);padding:34px 18px 96px}
+  .hero .stars{position:absolute;right:-10px;top:8px;width:220px;opacity:.55;pointer-events:none}
+  .hero-inner{max-width:680px;margin:0 auto;position:relative}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft)}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--gold)}
+  .hero h1{font-size:30px;font-weight:800;color:#fff;margin-top:10px}
+  .hero h1 .gold{color:var(--gold)}
+  .hero p{color:rgba(255,248,231,.82);max-width:540px}
+
+  main{flex:1;max-width:680px;width:100%;margin:-72px auto 0;padding:0 16px 48px;position:relative}
+  .card{background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(18,29,53,.16);border-top:4px solid var(--gold);padding:26px 20px}
+  .card.start{background:linear-gradient(180deg,rgba(18,29,53,.68),rgba(18,29,53,.84)),url(quiz-map.jpg) center/cover no-repeat,var(--navy);color:#fff}
+  .card.start h2{color:#fff}
+  .card.start .area{color:rgba(255,248,231,.92)}
+  .card.start .facts{color:rgba(255,248,231,.82)}
+  .card.start .ico{border-color:var(--gold)}
+  @media (min-width:640px){.card{padding:34px 38px}.hero h1{font-size:40px}.hero{padding:44px 24px 104px}}
+  h1:focus,h2:focus{outline:none}
+
+  /* Start screen */
+  .areas{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:6px 0 22px}
+  .area{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:11.5px;font-weight:600;color:var(--muted);line-height:1.25}
+  .ico{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--cream);border:1.5px solid rgba(201,162,39,.55);color:var(--navy)}
+  .ico svg{width:22px;height:22px}
+  .facts{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:center;margin-top:14px;font-size:13.5px;color:var(--muted)}
+  .facts span::before{content:"✓ ";color:var(--gold);font-weight:700}
+
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;text-align:center;background:var(--gold);color:var(--navy-deep);font-family:Montserrat,sans-serif;font-weight:700;font-size:17px;padding:15px 20px;border:0;border-radius:999px;cursor:pointer;text-decoration:none;min-height:52px;box-shadow:0 10px 26px rgba(201,162,39,.32);transition:transform .15s,background .15s}
+  .btn:hover{background:var(--gold-soft);transform:translateY(-1px)}
+  .btn svg{width:18px;height:18px}
+
+  /* Question screen */
+  .steps{display:flex;gap:6px;margin-bottom:18px}
+  .steps i{flex:1;height:6px;border-radius:3px;background:var(--cream-deep)}
+  .steps i.on{background:var(--gold)}
+  .qhead{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+  .qhead .ico{width:54px;height:54px;flex:0 0 auto;background:var(--navy);border-color:var(--gold);color:var(--gold)}
+  .qhead .ico svg{width:26px;height:26px}
+  .qnum{font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .qarea{font-size:14px;color:var(--muted);font-weight:600}
+  .card h2{font-size:21px}
+  @media (min-width:640px){.card h2{font-size:24px}}
+  .answers{list-style:none;margin:16px 0 12px;padding:0}
+  .answers li{margin:0 0 10px}
+  .answer{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;color:var(--navy);border:1.5px solid #E4DAC0;border-radius:14px;padding:12px 14px;font-size:16px;min-height:56px;cursor:pointer;font-family:inherit;transition:border-color .15s,background .15s,transform .15s}
+  .answer:hover{border-color:var(--gold);background:#FFFCF3;transform:translateY(-1px)}
+  .answer .letter{flex:0 0 auto;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--cream);border:1.5px solid rgba(201,162,39,.6);font-family:Montserrat,sans-serif;font-weight:700;font-size:13px}
+  .answer[aria-pressed="true"]{border-color:var(--navy);background:#F7F1E1}
+  .answer[aria-pressed="true"] .letter{background:var(--navy);color:var(--gold);border-color:var(--navy)}
+  .textbtn{background:none;border:0;color:var(--navy);font-size:15px;font-weight:600;padding:8px 0;cursor:pointer;font-family:inherit;min-height:44px;opacity:.8}
+  .textbtn:hover{opacity:1;text-decoration:underline}
+  .btn:focus-visible,.answer:focus-visible,.link:focus-visible,.textbtn:focus-visible,.nav-link:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+
+  /* Result screen */
+  .rhead{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+  .rhead .ico{width:60px;height:60px;flex:0 0 auto;background:var(--gold);border:0;color:var(--navy-deep)}
+  .rhead .ico svg{width:28px;height:28px}
+  .label{font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .rhead h2{margin:2px 0 0}
+  .panel{border-radius:14px;padding:16px 16px 6px;margin-top:16px;background:var(--cream);border:1px solid var(--line)}
+  .panel h3{font-size:15px;display:flex;align-items:center;gap:8px;margin-bottom:6px}
+  .panel h3 svg{width:18px;height:18px;color:var(--gold)}
+  .panel.fix{background:#fff;border:1.5px solid var(--gold)}
+  .cta{margin-top:22px;border-radius:16px;padding:22px 20px;background:radial-gradient(ellipse at 100% 0%,rgba(201,162,39,.28),transparent 60%),var(--navy);color:var(--cream)}
+  .cta h3{color:#fff;font-size:19px}
+  .cta p{color:rgba(255,248,231,.84);font-size:15.5px}
+  .price{display:inline-block;font-family:Montserrat,sans-serif;font-weight:800;color:var(--gold);font-size:15px;letter-spacing:.04em;margin-bottom:6px}
+  .center{text-align:center}
+  .link{display:inline-flex;align-items:center;min-height:44px;margin-top:10px;color:var(--gold-soft);font-size:15px;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  .retake{display:flex;justify-content:center;margin-top:10px}
+  .disclaimer{font-size:12.5px;color:var(--muted);margin:16px 0 0;text-align:center}
+
+  footer{background:var(--navy-deep);color:rgba(255,248,231,.6);font-size:12.5px;text-align:center;padding:18px 16px}
+  footer a{color:var(--gold-soft)}
+  @media (max-width:380px){.areas{gap:4px}.area{font-size:10.5px}.ico{width:40px;height:40px}.nav-link{display:none}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="nav">
+    <a class="brand" href="../" aria-label="NUBARA Group home"><img src="../assets/logo-light.png" alt="NUBARA"><span class="brand-tag">Brand Today. Grow Tomorrow.</span></a>
+    <a class="nav-link" href="../">Back to site</a>
+  </div>
+</header>
+
+<section class="hero" aria-hidden="false">
+  <svg class="stars" viewBox="0 0 220 120" aria-hidden="true"><g fill="#C9A227"><path d="M150 10 L156 34 L180 40 L156 46 L150 70 L144 46 L120 40 L144 34Z"/><path d="M196 62 L199 72 L209 75 L199 78 L196 88 L193 78 L183 75 L193 72Z" opacity=".8"/><path d="M104 18 L106 25 L113 27 L106 29 L104 36 L102 29 L95 27 L102 25Z" opacity=".7"/></g><path d="M20 110 C 70 60, 120 45, 175 42" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round" opacity=".7"/></svg>
+  <div class="hero-inner">
+    <span class="eyebrow">Free 1-minute check</span>
+    <h1>Can Customers <span class="gold">Find</span> Your Business?</h1>
+    <p>Answer 5 quick questions and see the one gap most likely costing you customers, plus the first fix.</p>
+  </div>
+</section>
+
+<main>
+  <div class="card" id="app" aria-live="polite"></div>
+  <noscript><p>This quiz needs JavaScript turned on.</p></noscript>
+</main>
+
+<footer>© 2026 NUBARA Group · <a href="../">nubaragroup.com</a> · A quick self-check, not a full audit.</footer>
+
+<script>
+(function(){
+  "use strict";
+  var SCORE_URL = "https://www.nubaragroup.com/#score";
+  var CHECK_URL = "https://www.nubaragroup.com/#check";
+  var TIE_ORDER = ["gbp","website","directories","ai","social"];
+  var ICONS = {
+    gbp:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+    website:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M3 8h18"/></svg>',
+    social:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg>',
+    ai:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg>',
+    directories:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg>',
+    none:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+    why:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg>',
+    fix:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>',
+    arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+  };
+  var AREA_NAMES = {gbp:"Google profile", website:"Website", social:"Social media", ai:"AI search", directories:"Directories"};
+
+  var QUESTIONS = [
+    {area:"gbp", text:"Does your business have a Google Business Profile (the listing that shows on Google Search and Maps)?", answers:[
+      ["Yes, and I've checked or updated it in the last 3 months",0],
+      ["Yes, but I haven't updated it in a while",2],
+      ["I'm not sure, or someone else set it up",2],
+      ["No, or I don't think so",3]]},
+    {area:"website", text:"Does your business have its own website?", answers:[
+      ["Yes, it works well on phones and shows our services, area and phone number",0],
+      ["Yes, but it's outdated or hard to use on a phone",2],
+      ["Only a Facebook page or a free listing page",2],
+      ["No website yet",3]]},
+    {area:"social", text:"How active are your business's social media pages (Facebook, Instagram, etc.)?", answers:[
+      ["We post at least once a week",0],
+      ["We post a few times a month",1],
+      ["We have pages but rarely post",2],
+      ["We don't have business social pages",3]]},
+    {area:"ai", text:"If someone asks ChatGPT or Google's AI “best [your service] near [your city],” does your business come up?", answers:[
+      ["Yes, I've checked and we show up with the right details",0],
+      ["Sometimes, or the details are wrong",2],
+      ["I haven't checked",2],
+      ["I checked and we don't show up",3]]},
+    {area:"directories", text:"Are your business name, address and phone number the same on sites like Yelp, Bing, Apple Maps and the BBB?", answers:[
+      ["Yes, I've checked and they all match",0],
+      ["Mostly, but a few may be out of date",1],
+      ["I'm not sure, I've never checked",2],
+      ["I know some are wrong or missing",3]]}
+  ];
+
+  var RESULTS = {
+    gbp:{title:"Your Google Business Profile",
+      why:"When people search for a service nearby, Google often shows map listings before regular websites. If your profile is missing, incomplete or out of date, customers may pick a competitor or call you with the wrong hours.",
+      fix:"Search your business name on Google Maps. No listing? Create a free one at google.com/business. Already listed? Check your hours, phone number and service area, and add a few recent photos."},
+    website:{title:"Your website",
+      why:"Your website is where customers check that you're real, see what you offer and find out how to reach you. If it's missing or hard to use on a phone, many people will leave and try someone else.",
+      fix:"Open your website on your phone. Make sure your phone number can be tapped to call, and that your services and service area show on the first screen. No website yet? Add your services and phone number to your Google profile today."},
+    directories:{title:"Your directory listings",
+      why:"Google, map apps and AI tools compare your name, address and phone number across many sites. When they don't match, customers get confused and those tools become less sure which details are right.",
+      fix:"Write your exact business name, address and phone number on one line. Then check Yelp, Bing Places and Apple Business Connect, and correct any listing that doesn't match."},
+    ai:{title:"Your AI search visibility",
+      why:"Some customers now ask AI assistants for recommendations instead of scrolling search results. These tools build answers from what's published about you, including listings, reviews and your website. If that information is thin or inconsistent, you may be left out.",
+      fix:"Ask ChatGPT, or another AI assistant, “best [your service] in [your city]” and note what it says. Then make sure your website says clearly, in plain words, what you do and where you do it."},
+    social:{title:"Your social media presence",
+      why:"Many customers glance at a business's social pages to see if it's active and trustworthy. A page with no recent posts can make people wonder whether you're still open.",
+      fix:"This week, post one photo of recent work or your team, with your service and city in the caption. Then aim for one post a week."},
+    none:{label:"Your result", title:"You're in good shape",
+      why:"Based on your answers, your basics look covered. A quick self-check can't see everything, though. Small details, like an old phone number on one directory or an AI tool describing you wrongly, are easy to miss.",
+      fix:"Keep it up: check your Google profile and your top directory listings once every 3 months."}
+  };
+
+  function route(choices){
+    var weights = {};
+    QUESTIONS.forEach(function(q,i){ weights[q.area] = q.answers[choices[i]][1]; });
+    var max = Math.max.apply(null, TIE_ORDER.map(function(a){return weights[a];}));
+    if (max <= 1) return "none";
+    for (var i=0;i<TIE_ORDER.length;i++){ if (weights[TIE_ORDER[i]] === max) return TIE_ORDER[i]; }
+  }
+
+  var app = document.getElementById("app");
+  var choices = [], step = -1;
+
+  function el(tag, attrs, text){
+    var e = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function(k){ e.setAttribute(k, attrs[k]); });
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function icon(name, cls){ var d = el("div",{"class":cls||"ico","aria-hidden":"true"}); d.innerHTML = ICONS[name]; return d; }
+  function focusHeading(){ var h = app.querySelector("h1,h2"); if (h){ h.setAttribute("tabindex","-1"); h.focus({preventScroll:true}); } }
+  function render(){
+    app.innerHTML = "";
+    app.classList.toggle("start", step === -1);
+    if (step === -1) renderStart(); else if (step < QUESTIONS.length) renderQuestion(); else renderResult();
+    focusHeading();
+    if (step !== -1) app.scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  function renderStart(){
+    app.appendChild(el("h2",null,"What we'll check"));
+    var g = el("div",{"class":"areas"});
+    ["gbp","website","social","ai","directories"].forEach(function(a){
+      var d = el("div",{"class":"area"}); d.appendChild(icon(a)); d.appendChild(el("span",null,AREA_NAMES[a])); g.appendChild(d);
+    });
+    app.appendChild(g);
+    var b = el("button",{"class":"btn",type:"button",id:"start"}); b.innerHTML = "Start the quiz " + ICONS.arrow;
+    b.addEventListener("click",function(){ choices=[]; step=0; render(); });
+    app.appendChild(b);
+    var f = el("div",{"class":"facts"});
+    ["5 questions","About 1 minute","No sign-up","Nothing saved or sent"].forEach(function(t){ f.appendChild(el("span",null,t)); });
+    app.appendChild(f);
+  }
+
+  function renderQuestion(){
+    var q = QUESTIONS[step];
+    var s = el("div",{"class":"steps",role:"progressbar","aria-valuemin":"0","aria-valuemax":String(QUESTIONS.length),"aria-valuenow":String(step+1),"aria-label":"Quiz progress"});
+    for (var i=0;i<QUESTIONS.length;i++) s.appendChild(el("i",{"class": i<=step ? "on" : ""}));
+    app.appendChild(s);
+    var h = el("div",{"class":"qhead"}); h.appendChild(icon(q.area));
+    var t = el("div"); t.appendChild(el("div",{"class":"qnum"},"Question "+(step+1)+" of "+QUESTIONS.length)); t.appendChild(el("div",{"class":"qarea"},AREA_NAMES[q.area]));
+    h.appendChild(t); app.appendChild(h);
+    app.appendChild(el("h2",{id:"qtext"},q.text));
+    var ul = el("ul",{"class":"answers","aria-labelledby":"qtext"});
+    q.answers.forEach(function(a,i){
+      var li = el("li");
+      var b = el("button",{"class":"answer",type:"button","aria-pressed":String(choices[step]===i)});
+      b.appendChild(el("span",{"class":"letter","aria-hidden":"true"},"ABCD"[i]));
+      b.appendChild(el("span",null,a[0]));
+      b.addEventListener("click",function(){ choices[step]=i; step++; render(); });
+      li.appendChild(b); ul.appendChild(li);
+    });
+    app.appendChild(ul);
+    var back = el("button",{"class":"textbtn",type:"button"},"‹ Back");
+    back.addEventListener("click",function(){ step--; render(); });
+    app.appendChild(back);
+  }
+
+  function renderResult(){
+    var key = route(choices), r = RESULTS[key];
+    app.setAttribute("data-result", key);
+    var h = el("div",{"class":"rhead"}); h.appendChild(icon(key));
+    var t = el("div"); t.appendChild(el("div",{"class":"label"}, r.label || "Your main gap")); t.appendChild(el("h2",null,r.title));
+    h.appendChild(t); app.appendChild(h);
+    var p1 = el("div",{"class":"panel"}); var h1 = el("h3"); h1.innerHTML = ICONS.why; h1.appendChild(document.createTextNode("Why it matters")); p1.appendChild(h1); p1.appendChild(el("p",null,r.why)); app.appendChild(p1);
+    var p2 = el("div",{"class":"panel fix"}); var h2 = el("h3"); h2.innerHTML = ICONS.fix; h2.appendChild(document.createTextNode(key==="none" ? "Your next step" : "Your first fix")); p2.appendChild(h2); p2.appendChild(el("p",null,r.fix)); app.appendChild(p2);
+    var cta = el("div",{"class":"cta"});
+    cta.appendChild(el("span",{"class":"price"},"BE FOUND SCORE · $149"));
+    cta.appendChild(el("h3",null,"Want the full picture?"));
+    cta.appendChild(el("p",null,"We check your Google profile and reviews, website, social pages, AI search answers, and whether you're listed on key directories, then score you out of 100 with a clear list of what to fix first."));
+    var a = el("a",{"class":"btn",href:SCORE_URL}); a.innerHTML = "Get your Be Found Score " + ICONS.arrow; cta.appendChild(a);
+    var c = el("div",{"class":"center"}); c.appendChild(el("a",{"class":"link",href:CHECK_URL},"Not ready? Get a free visibility check")); cta.appendChild(c);
+    app.appendChild(cta);
+    var rt = el("div",{"class":"retake"}); var again = el("button",{"class":"textbtn",type:"button"},"↻ Retake the quiz");
+    again.addEventListener("click",function(){ app.removeAttribute("data-result"); choices=[]; step=-1; render(); window.scrollTo(0,0); });
+    rt.appendChild(again); app.appendChild(rt);
+    app.appendChild(el("p",{"class":"disclaimer"},"This quiz is a quick self-check based only on your answers. It is not an audit."));
+  }
+
+  window.__quiz = {route:route};
+  render();
+})();
+</script>
+</body>
+</html>
