@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUBARA Partner Program | Earn by Referring Businesses</title>
+  <meta name="description" content="Join the NUBARA Partner Program. Refer small businesses to NUBARA Group and earn a commission on every client who buys. Free to join.">
+  <link rel="canonical" href="https://www.nubaragroup.com/partners/">
+  <meta property="og:title" content="NUBARA Partner Program">
+  <meta property="og:description" content="Know a business that needs to get found online? Refer them to NUBARA Group and earn a commission on every sale. Free to join.">
+  <meta property="og:url" content="https://www.nubaragroup.com/partners/">
+  <meta property="og:image" content="https://www.nubaragroup.com/assets/logo-navy.png">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    .pp-hero { position: relative; color: var(--cream); padding: 84px 0 76px; background: linear-gradient(100deg, rgba(18,29,53,.95) 0%, rgba(18,29,53,.84) 50%, rgba(18,29,53,.62) 100%), url(../assets/check-team.jpg) center / cover no-repeat, var(--navy-deep); }
+    .pp-hero h1 { font-size: clamp(36px, 5.2vw, 60px); font-weight: 800; letter-spacing: -.02em; max-width: 760px; color: #fff; }
+    .pp-hero h1 .gold { color: var(--gold); }
+    .pp-hero .lead { font-size: 19px; color: rgba(255,248,231,.85); max-width: 600px; margin: 20px 0 30px; }
+    .pp-chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .pp-chips span { font-size: 14px; font-weight: 600; color: var(--gold-soft); border: 1px solid rgba(201,162,39,.5); border-radius: 999px; padding: 7px 14px; background: rgba(18,29,53,.45); }
+    .pp-section { padding: 76px 0; }
+    .pp-alt { background: var(--cream-deep, #F5EAD0); }
+    .pp-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 34px; }
+    .pp-step { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 18px; padding: 26px; box-shadow: 0 14px 36px rgba(27,42,74,.07); }
+    .pp-step .n { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 30px; color: var(--gold); }
+    .pp-step h3 { font-size: 19px; margin: 8px 0 6px; }
+    .pp-step p { color: var(--muted); margin: 0; }
+    .pp-earn { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+    .pp-pkg { background: var(--navy); color: var(--cream); border-radius: 18px; padding: 26px; border: 1px solid rgba(201,162,39,.4); }
+    .pp-pkg .name { font-size: 15px; color: rgba(255,248,231,.8); font-weight: 600; }
+    .pp-pkg .price { font-size: 14px; color: rgba(255,248,231,.6); margin-top: 2px; }
+    .pp-pkg .you { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 40px; color: var(--gold); margin-top: 14px; line-height: 1; }
+    .pp-pkg .you small { display: block; font-size: 13px; font-weight: 600; color: var(--gold-soft); letter-spacing: .08em; text-transform: uppercase; margin-top: 6px; }
+    .pp-note { color: var(--muted); font-size: 14px; margin-top: 16px; }
+    .pp-who { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 28px; }
+    .pp-who div { background: #fff; border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 14px; padding: 16px; font-weight: 600; color: var(--navy); }
+    .pp-who span { display: block; font-weight: 400; color: var(--muted); font-size: 14px; margin-top: 4px; }
+    .pp-rules { list-style: none; padding: 0; margin: 26px 0 0; display: grid; gap: 12px; max-width: 820px; }
+    .pp-rules li { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px 14px 44px; position: relative; color: var(--ink); }
+    .pp-rules li::before { content: "✓"; position: absolute; left: 16px; top: 13px; color: var(--gold); font-weight: 800; }
+    .pp-join { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+    .check-form .agree { display: flex; gap: 10px; align-items: flex-start; font-weight: 400; font-size: 14.5px; }
+    .check-form .agree input { width: 20px; height: 20px; margin-top: 2px; flex: 0 0 auto; accent-color: var(--navy); }
+    .form-status.ok { color: #1F7A3A; font-weight: 600; } .form-status.err { color: #A3261B; font-weight: 600; }
+    .hp { position: absolute; left: -9999px; }
+    @media (max-width: 900px) { .pp-steps, .pp-earn { grid-template-columns: 1fr; } .pp-who { grid-template-columns: 1fr 1fr; } .pp-join { grid-template-columns: 1fr; gap: 30px; } .pp-section { padding: 56px 0; } }
+    @media (max-width: 520px) { .pp-who { grid-template-columns: 1fr; } .check-form .two { grid-template-columns: 1fr; } }
+
+    .pp-one { color: var(--cream); padding: 64px 0; background: linear-gradient(100deg, rgba(18,29,53,.95) 0%, rgba(18,29,53,.86) 55%, rgba(18,29,53,.72) 100%), url(../assets/check-team.jpg) center / cover no-repeat, var(--navy-deep); }
+    .pp-one-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 44px; align-items: start; }
+    .pp-one h1 { font-size: clamp(34px, 4.6vw, 54px); font-weight: 800; letter-spacing: -.02em; color: #fff; }
+    .pp-one h1 .gold { color: var(--gold); }
+    .pp-one .lead { font-size: 18px; color: rgba(255,248,231,.86); margin: 16px 0 20px; }
+    .pp-mini-steps { margin: 0 0 22px; padding-left: 20px; color: rgba(255,248,231,.9); display: grid; gap: 6px; }
+    .pp-mini-steps b { color: var(--gold-soft); }
+    .pp-mini-earn { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .pp-mini-earn .pp-pkg { padding: 14px; border-radius: 14px; background: rgba(18,29,53,.7); }
+    .pp-mini-earn .pp-pkg .you { font-size: 26px; margin-top: 8px; }
+    .pp-mini-earn .pp-pkg .name { font-size: 13px; } .pp-mini-earn .pp-pkg .price { font-size: 12px; }
+    .pp-fine { font-size: 13.5px; color: rgba(255,248,231,.7); margin-top: 16px; }
+    .pp-one .check-form { border-top: 4px solid var(--gold); }
+    @media (max-width: 900px) { .pp-one-grid { grid-template-columns: 1fr; gap: 28px; } }
+    @media (max-width: 420px) { .pp-mini-earn .pp-pkg .you { font-size: 21px; } }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="../" aria-label="NUBARA home"><img src="../assets/logo-light.png" alt="NUBARA"><span class="brand-tag">Brand Today. Grow Tomorrow.</span></a>
+    <a class="btn btn-gold" href="#partner-form">Become a Partner</a>
+  </div>
+</header>
+
+<main>
+  <section class="pp-one">
+    <div class="wrap pp-one-grid">
+      <div class="pp-one-copy">
+        <span class="eyebrow hero-eyebrow">NUBARA Partner Program</span>
+        <h1>Refer a business. <span class="gold">Earn <span data-pp="rate">20%</span>.</span></h1>
+        <p class="lead">Know a business owner who needs more customers? Introduce them to NUBARA Group. When they become a client, you earn <span data-pp="rate">20%</span> of their purchase. Free to join.</p>
+        <ol class="pp-mini-steps"><li><b>Join</b> and get your referral code</li><li><b>Refer</b> business owners who need to get found</li><li><b>Get paid</b> <span data-pp="payout">monthly</span> after a <span data-pp="hold">30-day</span> hold</li></ol>
+        <div class="pp-mini-earn" id="pp-earn"></div>
+        <p class="pp-fine">Founding Partner rate. Paid once per new client (on the Complete Growth Package, 20% of the setup fee) when they use your code. Refunds don't earn a commission. Tell people you may earn a reward. No spam or fake reviews. NUBARA approves all partners.</p>
+      </div>
+      <form id="partner-form" class="check-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="8284ff2a-1e39-4fea-b496-b6483963de7b">
+        <input type="hidden" name="subject" value="New Partner Program Application (nubaragroup.com)">
+        <input type="hidden" name="from_name" value="NUBARA Website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Full name<input type="text" name="name" autocomplete="name" required></label>
+        <div class="two">
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+        </div>
+        <label><span>Business or role <span class="opt">(optional)</span></span><input type="text" name="business_or_role" placeholder="e.g. Web designer, ABC Studio"></label>
+        <label>How do you know business owners?
+          <select name="network" required>
+            <option value="" disabled selected>Choose one</option>
+            <option>I work with businesses (designer, freelancer, consultant)</option>
+            <option>I'm a business owner</option>
+            <option>I'm a past NUBARA client</option>
+            <option>Community, church or networking group</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>City and state<input type="text" name="city_state" placeholder="Atlanta, GA" required></label>
+        <label><span>Anything else? <span class="opt">(optional)</span></span><textarea name="message" rows="3"></textarea></label>
+        <label class="agree"><input type="checkbox" name="agreed_to_rules" value="Yes" required><span>I agree to the program rules, including telling people I may earn a reward.</span></label>
+        <button type="submit" class="btn btn-gold">Apply to Become a Partner</button>
+        <p class="form-note">By applying, you agree we may contact you about the Partner Program. See our <a href="../privacy-policy.html">Privacy Policy</a>.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" style="padding-top:28px">
+  <div class="wrap">
+    <div class="footer-bottom">
+      <span>&copy; 2026 NUBARA Group, operated by NUBARA LLC, a Georgia limited liability company. All rights reserved.</span>
+      <span><a href="../">Home</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-service.html">Terms of Service</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===== PARTNER PROGRAM NUMBERS: change only these (leadership decides) ===== */
+var PP = {
+  rate: 20,                          /* commission percent */
+  basis: "client's first purchase",
+  hold: "30-day",
+  payout: "monthly",
+  packages: [
+    { name: "Be Found Score", price: 149 },
+    { name: "Google Listing Fix", price: 199 },
+    { name: "One-Page Website", price: 399 },
+    { name: "Complete Growth Package", price: 1500, label: "Setup fee $1,500" }
+  ]
+};
+/* ============================================================================ */
+(function () {
+  function set(k, v) { document.querySelectorAll('[data-pp="' + k + '"]').forEach(function (e) { e.textContent = v; }); }
+  set('rate', PP.rate + '%'); set('basis', PP.basis); set('hold', PP.hold); set('payout', PP.payout);
+  var box = document.getElementById('pp-earn');
+  PP.packages.forEach(function (p) {
+    var d = document.createElement('div'); d.className = 'pp-pkg';
+    var earn = (p.price * PP.rate / 100);
+    d.innerHTML = '<div class="name"></div><div class="price"></div><div class="you"></div>';
+    d.querySelector('.name').textContent = p.name;
+    d.querySelector('.price').textContent = p.label || ('Client pays $' + p.price);
+    d.querySelector('.you').innerHTML = '$' + earn.toFixed(2).replace(/\.00$/, '') + '<small>You earn</small>';
+    box.appendChild(d);
+  });
+  var f = document.getElementById('partner-form');
+  var st = f.querySelector('.form-status'), btn = f.querySelector('button[type=submit]');
+  f.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!f.checkValidity()) { st.textContent = 'Please fill in your name, email, phone, city and network, and agree to the rules.'; st.className = 'form-status err'; f.reportValidity(); return; }
+    btn.disabled = true; btn.textContent = 'Sending...'; st.textContent = ''; st.className = 'form-status';
+    fetch(f.action, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(f))) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.success !== false, j: j }; }); })
+      .then(function (x) { if (x.ok) { f.reset(); st.textContent = "Thank you! We received your application and will reply within 2 business days."; st.className = 'form-status ok'; } else { throw new Error('error'); } })
+      .catch(function () { st.innerHTML = 'Something went wrong. Please email <a href="mailto:info@nubaragroup.com">info@nubaragroup.com</a> or call or text <a href="tel:+14707980045">470-798-0045</a>.'; st.className = 'form-status err'; })
+      .finally(function () { btn.disabled = false; btn.textContent = 'Apply to Become a Partner'; });
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "90c4c765b89a4a79b13aca166b0703b9"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -312,3 +312,27 @@ section { padding: 96px 0; }
 .hero-eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--gold); }
 .hero-pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .hero-pills span { font-family: "Montserrat", sans-serif; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; color: var(--cream); padding: 6px 14px; border-radius: 999px; border: 1px solid rgba(201, 162, 39, .55); background: rgba(18, 29, 53, .45); }
+/* Packages & pricing */
+.pk-grid { display: grid; grid-template-columns: repeat(3, 1fr) 1.35fr; gap: 18px; align-items: stretch; margin-top: 30px; }
+.pk-card { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--gold); border-radius: 18px; padding: 24px; display: flex; flex-direction: column; box-shadow: 0 14px 34px rgba(27, 42, 74, .07); }
+.pk-name { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 17px; color: var(--navy); }
+.pk-price { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 38px; color: var(--navy); margin: 6px 0 10px; line-height: 1; }
+.pk-price small { font-size: 16px; font-weight: 700; }
+.pk-card p { color: var(--muted); font-size: 15px; flex: 1; }
+.pk-card .btn { text-align: center; margin-top: 12px; }
+.btn-ghost-dark { border: 1.5px solid var(--navy); color: var(--navy); background: transparent; }
+.btn-ghost-dark:hover { background: var(--navy); color: var(--cream); }
+.pk-feature { background: var(--navy); color: var(--cream); border: 1px solid rgba(201, 162, 39, .55); border-top: 4px solid var(--gold); box-shadow: 0 24px 60px rgba(18, 29, 53, .28); }
+.pk-feature .pk-name, .pk-feature .pk-price { color: #fff; }
+.pk-feature .pk-price { color: var(--gold); }
+.pk-badge { align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--navy-deep); background: var(--gold); border-radius: 999px; padding: 5px 11px; margin-bottom: 12px; }
+.pk-setup { font-size: 14px; color: var(--gold-soft); margin-bottom: 12px; }
+.pk-feature ul { margin: 0 0 6px; padding-left: 18px; color: rgba(255, 248, 231, .9); font-size: 15px; display: grid; gap: 6px; flex: 1; align-content: start; }
+.pk-feature .pk-fine { font-size: 12.5px; color: rgba(255, 248, 231, .6); margin: 10px 0 0; flex: 0; }
+@media (max-width: 1000px) { .pk-grid { grid-template-columns: 1fr 1fr; } .pk-feature { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .pk-grid { grid-template-columns: 1fr; } }
+.pk-card p { flex: 0; margin-bottom: 10px; }
+.pk-list { margin: 0; padding-left: 18px; color: var(--ink); font-size: 14.5px; display: grid; gap: 5px; flex: 1; }
+.pk-list li::marker { color: var(--gold); }
+
+.pk-list { align-content: start; }
