@@ -367,4 +367,16 @@ section { padding: 96px 0; }
 .step-list li::marker { color: var(--gold); }
 /* Tablet: keep nav on one line */
 @media (min-width: 901px) and (max-width: 1180px) { .nav-links { gap: 16px; } .nav-links a { font-size: 14px; white-space: nowrap; } .nav-links .btn { padding: 10px 14px; } .brand-tag { font-size: 10px; } }
+/* Services: side by side with more detail */
+.service { display: flex; flex-direction: column; }
+.service-body { display: flex; flex-direction: column; flex: 1; padding: 0 24px 26px; }
+.service ul { flex: 1; }
+.service li { font-size: 14.5px; padding: 6px 0 6px 24px; }
+.svc-best { font-size: 14px; color: var(--muted); background: var(--cream); border-left: 3px solid var(--gold); border-radius: 10px; padding: 10px 12px; margin: 16px 0 14px !important; }
+.svc-best strong { color: var(--navy); }
+.svc-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; border-top: 1px solid var(--line); padding-top: 14px; }
+.svc-from { font-size: 14px; color: var(--muted); }
+.svc-from b { font-family: "Montserrat", sans-serif; font-size: 18px; color: var(--navy); }
+.svc-foot a { font-weight: 700; font-size: 14.5px; color: var(--navy); text-decoration: none; border-bottom: 2px solid var(--gold); }
+@media (max-width: 960px) and (min-width: 700px) { .services-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } .service-body { padding: 0 16px 20px; } .service h3 { font-size: 19px; } .service li { font-size: 13.5px; } }
 
