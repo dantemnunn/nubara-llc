@@ -173,11 +173,49 @@
         <div class="pk-card"><div class="pk-name">One-Page Website</div><div class="pk-price">$399</div><p>A professional site that turns visitors into calls.</p>
           <ul class="pk-list"><li>Mobile-friendly, fast single page</li><li>Sections: services, about, reviews, contact</li><li>Click-to-call &amp; contact form</li><li>Google Map &amp; business hours</li><li>Basic SEO, ready for Google &amp; AI search</li><li>Help connecting your domain</li><li>1 revision round (you supply text &amp; photos)</li></ul><a class="btn btn-ghost-dark" href="#check">Get Started</a></div>
         <div class="pk-card"><div class="pk-name">Social Media Content</div><div class="pk-price">$397<small>/mo</small></div><p>Fresh, on-brand posts every month, ready to share.</p>
-          <ul class="pk-list"><li>12 custom posts a month</li><li>Up to 2 platforms</li><li>Branded designs in your colors</li><li>Captions &amp; hashtags written for you</li><li>Monthly ready-to-post content calendar</li><li>Monthly performance report</li><li>You post it, no account logins needed</li></ul><a class="btn btn-ghost-dark" href="#check">Get Started</a></div>
+          <ul class="pk-list"><li>12 custom posts a month</li><li>Up to 2 platforms</li><li>Branded designs in your colors</li><li>Captions &amp; hashtags written for you</li><li>Monthly ready-to-post content calendar</li><li>Monthly performance report</li><li>You post it, no account logins needed</li></ul><a class="btn btn-ghost-dark js-sales" data-pkg="Social Media Content ($397/mo)" href="#sales">Contact Sales</a></div>
         <div class="pk-card pk-feature"><span class="pk-badge">Founding Client Offer &middot; 5 Spots</span><div class="pk-name">Complete Growth Package</div><div class="pk-price">$997<small>/mo</small></div><div class="pk-setup">+ $1,500 one-time setup &middot; 6-month minimum</div>
           <ul><li>Be Found Score included</li><li>Logo &amp; branding (2 concepts)</li><li>5-page website</li><li>Google Business Profile &amp; local SEO</li><li>12 social posts a month</li><li>Ads management (Google or Meta)</li><li>Monthly email campaign</li><li>AI visibility check</li><li>Monthly report &amp; strategy call</li></ul>
-          <a class="btn btn-gold" href="#contact">Book a Strategy Call</a><p class="pk-fine">Founding price locked for 12 months. Ad budget paid by you directly to Google or Meta.</p></div>
+          <a class="btn btn-gold js-sales" data-pkg="Complete Growth Package ($997/mo + $1,500 setup)" href="#sales">Contact Sales</a><p class="pk-fine">Founding price locked for 12 months. Ad budget paid by you directly to Google or Meta.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section id="sales" class="sales-section">
+    <div class="wrap sales-grid">
+      <div class="section-head" style="margin:0">
+        <span class="eyebrow">Contact Sales</span>
+        <h2>Let's talk about your plan</h2>
+        <p>Interested in a monthly package? Send us a few details and our team will reach out within 1 business day to walk through your goals, answer questions and set up your agreement.</p>
+        <p>Prefer to talk now? Call or text <a href="tel:+14707980045">470-798-0045</a> or email <a href="mailto:info@nubaragroup.com">info@nubaragroup.com</a>.</p>
+      </div>
+      <form id="sales-form" class="check-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="8284ff2a-1e39-4fea-b496-b6483963de7b">
+        <input type="hidden" name="subject" value="New Sales Inquiry: Monthly Package (nubaragroup.com)">
+        <input type="hidden" name="from_name" value="NUBARA Website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label>Package
+          <select name="package" id="sales-package" required>
+            <option value="" disabled selected>Choose a package</option>
+            <option>Complete Growth Package ($997/mo + $1,500 setup)</option>
+            <option>Social Media Content ($397/mo)</option>
+            <option>Not sure yet, help me choose</option>
+          </select>
+        </label>
+        <div class="two">
+          <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Business name<input type="text" name="business_name" autocomplete="organization" required></label>
+        </div>
+        <div class="two">
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Phone<input type="tel" name="phone" autocomplete="tel" required></label>
+        </div>
+        <label><span>Website <span class="opt">(optional)</span></span><input type="text" name="website" placeholder="www.yourbusiness.com"></label>
+        <label><span>What are your goals? <span class="opt">(optional)</span></span><textarea name="message" rows="3"></textarea></label>
+        <button type="submit" class="btn btn-gold">Contact Sales</button>
+        <p class="form-note">By submitting, you agree we may contact you about your inquiry. See our <a href="privacy-policy.html">Privacy Policy</a>.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
@@ -343,6 +381,24 @@
       })
       .catch(function(){ st.innerHTML='Something went wrong. Please call or text <a href="tel:+14707980045">470-798-0045</a> or email <a href="mailto:info@nubaragroup.com">info@nubaragroup.com</a>.'; st.className='form-status err'; })
       .finally(function(){ btn.disabled=false; btn.textContent='Request My Free Check'; });
+  });
+})();
+</script>
+<script>
+(function(){
+  var sel=document.getElementById('sales-package');
+  document.querySelectorAll('.js-sales').forEach(function(a){ a.addEventListener('click',function(){ if(sel) sel.value=a.getAttribute('data-pkg'); }); });
+  var f=document.getElementById('sales-form'); if(!f) return;
+  var st=f.querySelector('.form-status'), btn=f.querySelector('button[type=submit]');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){ st.textContent='Please choose a package and fill in your name, business, email and phone.'; st.className='form-status err'; f.reportValidity(); return; }
+    btn.disabled=true; btn.textContent='Sending...'; st.textContent=''; st.className='form-status';
+    fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.fromEntries(new FormData(f)))})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok&&j.success!==false};});})
+      .then(function(x){ if(x.ok){ f.reset(); st.textContent='Thank you! Our team will reach out within 1 business day.'; st.className='form-status ok'; } else { throw new Error('e'); } })
+      .catch(function(){ st.innerHTML='Something went wrong. Please call or text <a href="tel:+14707980045">470-798-0045</a> or email <a href="mailto:info@nubaragroup.com">info@nubaragroup.com</a>.'; st.className='form-status err'; })
+      .finally(function(){ btn.disabled=false; btn.textContent='Contact Sales'; });
   });
 })();
 </script>

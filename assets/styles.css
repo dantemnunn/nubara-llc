@@ -358,3 +358,9 @@ section { padding: 96px 0; }
 
 .pk-section { background: linear-gradient(180deg, rgba(18, 29, 53, .80), rgba(18, 29, 53, .70)), url(packages-office.jpg) center 70% / cover no-repeat, var(--navy-deep); }
 .pk-feature { border: 2px solid var(--gold); box-shadow: 0 24px 60px rgba(0, 0, 0, .45); }
+/* Contact Sales */
+.sales-section { padding: 72px 0; background: var(--cream); }
+.sales-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+.sales-section .check-form { border-top: 4px solid var(--gold); }
+@media (max-width: 900px) { .sales-grid { grid-template-columns: 1fr; gap: 26px; } .sales-section { padding: 52px 0; } }
+
