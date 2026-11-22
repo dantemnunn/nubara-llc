@@ -363,4 +363,8 @@ section { padding: 96px 0; }
 .sales-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
 .sales-section .check-form { border-top: 4px solid var(--gold); }
 @media (max-width: 900px) { .sales-grid { grid-template-columns: 1fr; gap: 26px; } .sales-section { padding: 52px 0; } }
+.step-list { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 14.5px; display: grid; gap: 4px; }
+.step-list li::marker { color: var(--gold); }
+/* Tablet: keep nav on one line */
+@media (min-width: 901px) and (max-width: 1180px) { .nav-links { gap: 16px; } .nav-links a { font-size: 14px; white-space: nowrap; } .nav-links .btn { padding: 10px 14px; } .brand-tag { font-size: 10px; } }
 
