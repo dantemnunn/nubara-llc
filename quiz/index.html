@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Can Customers Find Your Business? | NUBARA Group</title>
-<meta name="description" content="Free 1-minute quiz from NUBARA Group. Answer 5 quick questions and see the one gap most likely keeping customers from finding your business.">
+<title>Visibara Quiz: Can Customers Find Your Business? | NUBARA Group</title>
+<meta name="description" content="The free 1-minute Visibara Quiz from NUBARA Group. Answer 5 quick questions and see the one gap most likely keeping customers from finding your business.">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,7 +116,7 @@
 <section class="hero" aria-hidden="false">
   <svg class="stars" viewBox="0 0 220 120" aria-hidden="true"><g fill="#C9A227"><path d="M150 10 L156 34 L180 40 L156 46 L150 70 L144 46 L120 40 L144 34Z"/><path d="M196 62 L199 72 L209 75 L199 78 L196 88 L193 78 L183 75 L193 72Z" opacity=".8"/><path d="M104 18 L106 25 L113 27 L106 29 L104 36 L102 29 L95 27 L102 25Z" opacity=".7"/></g><path d="M20 110 C 70 60, 120 45, 175 42" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round" opacity=".7"/></svg>
   <div class="hero-inner">
-    <span class="eyebrow">Free 1-minute check</span>
+    <span class="eyebrow">Visibara Quiz &middot; Free, 1 minute</span>
     <h1>Can Customers <span class="gold">Find</span> Your Business?</h1>
     <p>Answer 5 quick questions and see the one gap most likely costing you customers, plus the first fix.</p>
   </div>
@@ -272,11 +272,11 @@
     var p1 = el("div",{"class":"panel"}); var h1 = el("h3"); h1.innerHTML = ICONS.why; h1.appendChild(document.createTextNode("Why it matters")); p1.appendChild(h1); p1.appendChild(el("p",null,r.why)); app.appendChild(p1);
     var p2 = el("div",{"class":"panel fix"}); var h2 = el("h3"); h2.innerHTML = ICONS.fix; h2.appendChild(document.createTextNode(key==="none" ? "Your next step" : "Your first fix")); p2.appendChild(h2); p2.appendChild(el("p",null,r.fix)); app.appendChild(p2);
     var cta = el("div",{"class":"cta"});
-    cta.appendChild(el("span",{"class":"price"},"BE FOUND SCORE · $149"));
+    cta.appendChild(el("span",{"class":"price"},"VISIBARA SCORE · $149"));
     cta.appendChild(el("h3",null,"Want the full picture?"));
     cta.appendChild(el("p",null,"We check your Google profile and reviews, website, social pages, AI search answers, and whether you're listed on key directories, then score you out of 100 with a clear list of what to fix first."));
-    var a = el("a",{"class":"btn",href:SCORE_URL}); a.innerHTML = "Get your Be Found Score " + ICONS.arrow; cta.appendChild(a);
-    var c = el("div",{"class":"center"}); c.appendChild(el("a",{"class":"link",href:CHECK_URL},"Not ready? Get a free visibility check")); cta.appendChild(c);
+    var a = el("a",{"class":"btn",href:SCORE_URL}); a.innerHTML = "Get your Visibara Score " + ICONS.arrow; cta.appendChild(a);
+    var c = el("div",{"class":"center"}); c.appendChild(el("a",{"class":"link",href:CHECK_URL},"Not ready? Get a free Visibility Check")); cta.appendChild(c);
     app.appendChild(cta);
     var rt = el("div",{"class":"retake"}); var again = el("button",{"class":"textbtn",type:"button"},"↻ Retake the quiz");
     again.addEventListener("click",function(){ app.removeAttribute("data-result"); choices=[]; step=-1; render(); window.scrollTo(0,0); });
